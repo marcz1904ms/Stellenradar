@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Stellenradar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D2137; --grund:#E8EDF1; --flaeche:#FFFFFF; --tinte:#16222E; --leise:#5B6B7A;
+  --linie:#D3DBE2; --neu:#F2B53A; --s3:#1F7A6C; --s2:#6FAE9F; --s1:#C3D4D0; --s0:#E1E6EA;
+  --warn:#8A5A00; --warnbg:#FFF3D6;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--grund:#0F1822;--flaeche:#17222E;--tinte:#E6ECF1;--leise:#9AABBA;--linie:#2A3A4A;
+    --s0:#2A3643;--s1:#3E5A56;--warn:#F2C66B;--warnbg:#3A2E12;}
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--grund);color:var(--tinte);font-family:var(--sans);font-size:16px;line-height:1.45}
+header{background:var(--navy);color:#fff;padding:calc(28px + env(safe-area-inset-top,0px)) 20px 22px}
+.innen{max-width:980px;margin:0 auto}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1;margin:0 0 10px;letter-spacing:-.01em}
+.stand{color:#B8C7D6;font-size:.95rem;margin:0}
+.zahlen{display:flex;gap:28px;margin-top:18px;flex-wrap:wrap}
+.zahl b{display:block;font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1}
+.zahl span{color:#B8C7D6;font-size:.9rem}
+.filter{position:sticky;top:0;z-index:5;background:var(--grund);border-bottom:1px solid var(--linie);padding:12px 20px}
+.filter .innen{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--linie);background:var(--flaeche);color:var(--tinte);border-radius:999px;padding:5px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+select,input[type=search]{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--linie);border-radius:8px;background:var(--flaeche);color:var(--tinte)}
+input[type=search]{min-width:180px;flex:1}
+label.check{font-size:.9rem;display:flex;gap:6px;align-items:center;cursor:pointer}
+:focus-visible{outline:2px solid var(--neu);outline-offset:2px}
+main{padding:10px 20px calc(40px + env(safe-area-inset-bottom,0px))}
+ol{list-style:none;margin:0;padding:0}
+li.stelle{display:grid;grid-template-columns:14px 1fr auto;gap:14px;background:var(--flaeche);border-bottom:1px solid var(--linie);padding:14px 16px 14px 14px}
+li.stelle:first-child{border-radius:10px 10px 0 0}
+li.stelle:last-child{border-radius:0 0 10px 10px;border-bottom:0}
+li.stelle.aus{opacity:.55}
+.signal{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:3px;padding-top:6px}
+.signal i{display:block;height:9px;border-radius:2px;background:var(--s0)}
+.p1 .signal i:nth-child(-n+1){background:var(--s1)}
+.p2 .signal i:nth-child(-n+2){background:var(--s2)}
+.p3 .signal i:nth-child(-n+3){background:var(--s3)}
+.titel{font-weight:600;font-size:1.05rem;color:var(--tinte);text-decoration:none}
+.titel:hover{text-decoration:underline}
+.neu{display:inline-block;background:var(--neu);color:#2A1C00;font-size:.75rem;font-weight:600;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.meta{color:var(--leise);font-size:.9rem;margin-top:2px}
+.hinweise{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.hinweis{font-size:.78rem;background:var(--warnbg);color:var(--warn);border-radius:4px;padding:1px 7px}
+.grund{font-size:.8rem;color:var(--leise);margin-top:4px;font-style:italic}
+.aktionen{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.aktionen button{font:inherit;font-size:.8rem;border:1px solid var(--linie);background:transparent;color:var(--leise);border-radius:6px;padding:3px 9px;cursor:pointer;white-space:nowrap}
+.aktionen button[aria-pressed="true"]{background:var(--s3);border-color:var(--s3);color:#fff}
+.leer{background:var(--flaeche);border-radius:10px;padding:28px;color:var(--leise)}
+.legende{color:var(--leise);font-size:.85rem;margin:14px 0 10px;display:flex;gap:16px;flex-wrap:wrap}
+@media (max-width:620px){
+  .filter{position:static}
+  li.stelle{grid-template-columns:10px 1fr}
+  .aktionen{grid-column:2;flex-direction:row;align-items:center}
+}
+</style>
+</head>
+<body>
+<header><div class="innen">
+  <h1>Stellenradar</h1>
+  <p class="stand" id="stand"></p>
+  <div class="zahlen" id="zahlen"></div>
+</div></header>
+
+<div class="filter"><div class="innen">
+  <div class="chips" id="regionen" role="group" aria-label="Regionen"></div>
+  <select id="mindest" aria-label="Mindestens">
+    <option value="1">Alle mit HR-Bezug</option>
+    <option value="2" selected>Ab passend</option>
+    <option value="3">Nur sehr passend</option>
+  </select>
+  <input type="search" id="suche" placeholder="Titel oder Arbeitgeber suchen">
+  <label class="check"><input type="checkbox" id="nurneu"> Nur neue</label>
+  <label class="check"><input type="checkbox" id="zeigeaus"> Ausgeblendete zeigen</label>
+</div></div>
+
+<main><div class="innen">
+  <div class="legende"><span>Balken zeigen die Passung nach Stellentitel</span><span>Markierte Stellen vor der Bewerbung genauer prüfen</span></div>
+  <ol id="liste"></ol>
+</div></main>
+
+<script id="daten" type="application/json">{"stand": "24.09.2026, 15:44 Uhr", "regionen": ["Münster/Münsterland", "Köln", "Hamburg", "München"], "stellen": []}</script>
+<script>
+const D = JSON.parse(document.getElementById('daten').textContent);
+const SPEICHER = 'stellenradar-v1';
+let merk = {};
+try { merk = JSON.parse(localStorage.getItem(SPEICHER)) || {}; } catch (e) { merk = {}; }
+function sichern(){ try { localStorage.setItem(SPEICHER, JSON.stringify(merk)); } catch (e) {} }
+
+const aktiv = new Set(D.regionen);
+const $ = id => document.getElementById(id);
+
+$('stand').textContent = 'Zuletzt aktualisiert am ' + D.stand;
+
+D.regionen.forEach(r => {
+  const b = document.createElement('button');
+  b.className = 'chip'; b.textContent = r; b.setAttribute('aria-pressed','true');
+  b.onclick = () => { aktiv.has(r) ? aktiv.delete(r) : aktiv.add(r); b.setAttribute('aria-pressed', aktiv.has(r)); zeichnen(); };
+  $('regionen').appendChild(b);
+});
+['mindest','suche','nurneu','zeigeaus'].forEach(id => $(id).addEventListener('input', zeichnen));
+
+function datum(iso){ if(!iso) return ''; const [j,m,t] = iso.slice(0,10).split('-'); return t+'.'+m+'.'+j; }
+function esc(t){ return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function zeichnen(){
+  const min = +$('mindest').value, q = $('suche').value.trim().toLowerCase();
+  const nurNeu = $('nurneu').checked, zeigeAus = $('zeigeaus').checked;
+  const sichtbar = D.stellen.filter(s => {
+    const status = merk[s.id];
+    const aus = s.ausgeblendet || status === 'weg';
+    if (aus && !zeigeAus) return false;
+    if (!aus && s.punkte < min) return false;
+    if (!aktiv.has(s.region)) return false;
+    if (nurNeu && !s.neu) return false;
+    if (q && !(s.titel + ' ' + s.arbeitgeber).toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  const passend = D.stellen.filter(s => !s.ausgeblendet && merk[s.id] !== 'weg' && s.punkte >= 2);
+  $('zahlen').innerHTML =
+    `<div class="zahl"><b>${passend.length}</b><span>passende Stellen</span></div>` +
+    `<div class="zahl"><b>${passend.filter(s=>s.neu).length}</b><span>davon neu</span></div>` +
+    `<div class="zahl"><b>${Object.values(merk).filter(v=>v==='beworben').length}</b><span>als beworben markiert</span></div>`;
+
+  if (!sichtbar.length){
+    $('liste').innerHTML = '<li class="leer">Keine Stellen für diese Auswahl. Regionen erweitern oder „Alle mit HR-Bezug“ wählen.</li>';
+    return;
+  }
+  $('liste').innerHTML = sichtbar.map(s => {
+    const status = merk[s.id];
+    const aus = s.ausgeblendet || status === 'weg';
+    const grund = s.ausgeblendet ? s.ausgeblendet : (status === 'weg' ? 'Von dir ausgeblendet' : '');
+    return `<li class="stelle p${s.punkte} ${aus?'aus':''}">
+      <div class="signal" title="${esc(s.stufe || 'kein Treffer')}"><i></i><i></i><i></i></div>
+      <div>
+        <a class="titel" href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.titel)}</a>${s.neu?'<span class="neu">neu</span>':''}
+        <div class="meta">${esc(s.arbeitgeber)}${s.ort?', '+esc(s.ort):''}<br>${esc(s.region)}${s.veroeffentlicht?', online seit '+datum(s.veroeffentlicht):''}</div>
+        ${s.hinweise.length?`<div class="hinweise">${s.hinweise.map(h=>`<span class="hinweis">${esc(h)}</span>`).join('')}</div>`:''}
+        ${grund?`<div class="grund">${esc(grund)}</div>`:''}
+      </div>
+      <div class="aktionen">
+        <button data-id="${esc(s.id)}" data-art="beworben" aria-pressed="${status==='beworben'}">Beworben</button>
+        <button data-id="${esc(s.id)}" data-art="weg" aria-pressed="${status==='weg'}">${status==='weg'?'Wieder zeigen':'Ausblenden'}</button>
+      </div>
+    </li>`;
+  }).join('');
+}
+
+$('liste').addEventListener('click', e => {
+  const b = e.target.closest('button[data-id]'); if (!b) return;
+  const id = b.dataset.id, art = b.dataset.art;
+  merk[id] === art ? delete merk[id] : merk[id] = art;
+  sichern(); zeichnen();
+});
+
+zeichnen();
+</script>
+</body>
+</html>

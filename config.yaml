@@ -86,6 +86,17 @@ ausschluss_titel:
   - abschlussarbeit
   - masterarbeit
   - bachelorarbeit
+  # Keine echten Stellen
+  - talent pool
+  - talentpool
+  - talent community
+  - talent network
+  - initiativbewerbung
+  - initiative application
+  - initiativ
+  - open application
+  - speculative application
+  - "join our"
   # Seniorität: diese Stellen werden nicht angezeigt
   - senior
   - head of

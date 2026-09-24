@@ -43,6 +43,22 @@ UNGUELTIGE_KENNUNG = {"www", "api", "static", "cdn", "assets", "app", "embed", "
                       "careers", "jobs", "widget", "de", "en", "static-careers",
                       "tracking", "files", "media", "career", "cdn-cgi"}
 KARRIERE_LINK = re.compile(r"karriere|career|jobs?\b|stellen|vacanc|join-us|arbeiten-bei|jobboerse", re.I)
+# Merkmale eines echten Stellentitels
+GENDER = re.compile(r"[(\[]?\s*(?:[mwfdx]\s*[/|,]\s*){2}[mwfdx]\s*[)\]]?|all genders|alle geschlechter|\(gn\)|\(d\)|\*in\b|:in\b|/-?in\b", re.I)
+ROLLE = re.compile(r"\b(referent\w*|manager\w*|specialist|spezialist\w*|partner\w*|berater\w*|koordinator\w*|coordinator|"
+                   r"generalist|consultant|sachbearbeiter\w*|mitarbeiter\w*|associate|advisor|expert\w*|officer|"
+                   r"entwickler\w*|developer|recruiter|trainer\w*|coach|analyst|administrator\w*|assistent\w*|"
+                   r"werkstudent\w*|praktikant\w*|trainee|lead|leiter\w*|business partner)\b", re.I)
+STELLEN_URL = re.compile(r"(job|stelle|vacanc|position|offer|posting|karriere/.+/.+|\d{4,})", re.I)
+
+
+def sieht_aus_wie_stelle(titel, url=""):
+    """Unterscheidet echte Ausschreibungen von Menüpunkten wie „Fort- und Weiterbildung“."""
+    if GENDER.search(titel):
+        return True
+    return bool(ROLLE.search(titel) and STELLEN_URL.search(url or ""))
+
+
 NAVIGATION = re.compile(r"^(alle|all|mehr|more|zur|zu den|jetzt|hier|karriere|careers?|jobs?|stellen\w*|"
                         r"bewerb\w*|apply|login|anmelden|initiativ\w*|job alert|jobs? finden)\b", re.I)
 
@@ -237,7 +253,7 @@ def stellen_linksuche(url, ist_hr_titel):
     for href, linktext in links_von(text, endurl):
         if not (8 <= len(linktext) <= 140) or NAVIGATION.match(linktext):
             continue
-        if ist_hr_titel(linktext) and href not in gesehen:
+        if ist_hr_titel(linktext) and sieht_aus_wie_stelle(linktext, href) and href not in gesehen:
             gesehen.add(href)
             aus.append({"titel": linktext, "ort": "", "link": href, "datum": ""})
     return aus

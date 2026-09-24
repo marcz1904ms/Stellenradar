@@ -1,0 +1,106 @@
+# =====================================================================
+#  Stellenradar: deine Einstellungen
+#  Alles hinter einem # ist nur ein Kommentar und wird ignoriert.
+#  Wichtig: Einrückungen (Leerzeichen am Zeilenanfang) nicht verändern.
+# =====================================================================
+
+# --- Regionen: Ort und Umkreis in Kilometern ---------------------------
+regionen:
+  - name: Münster/Münsterland
+    ort: Münster
+    umkreis: 50
+  - name: Köln
+    ort: Köln
+    umkreis: 40
+  - name: Hamburg
+    ort: Hamburg
+    umkreis: 40
+  - name: München
+    ort: München
+    umkreis: 40
+
+# --- Wonach gesucht wird (Suche bei der Jobbörse der Arbeitsagentur) --
+suchbegriffe:
+  - Personalentwicklung
+  - Personalentwickler
+  - Learning Development
+  - Weiterbildung Referent
+  - Talent Management
+  - HR Business Partner
+  - People Culture
+  - Personalreferent
+  - HR Generalist
+  - HR Manager
+
+# Nur Stellen, die in den letzten X Tagen veröffentlicht wurden
+tage_zurueck: 30
+
+# Befristete Stellen zeigen (werden dann markiert) oder ganz weglassen
+befristete_stellen_zeigen: true
+
+# Ab wie vielen Tagen eine Stelle nicht mehr als "neu" gilt
+neu_fuer_tage: 3
+
+# --- Bewertung nach Stellentitel ---------------------------------------
+# Kleinbuchstaben, es reicht ein Wortteil. Die höchste Stufe zählt.
+bewertung:
+  - stufe: sehr passend
+    punkte: 3
+    begriffe: [personalentwick, learning, "l&d", weiterbildung, talent, organisationsentwick, people development, kompetenzentwick, "training manager", bildungsreferent]
+  - stufe: passend
+    punkte: 2
+    begriffe: [business partner, hrbp, "people & culture", people and culture, people&culture, generalist, personalreferent, referent personal, "referent (m/w/d) personal", hr manager, personalmanager, "hr specialist", "people manager"]
+  - stufe: teilweise
+    punkte: 1
+    begriffe: [ausbildung, onboarding, recruiting, personal, "hr ", human resources]
+
+# --- Ausschluss: Stelle wird ausgeblendet ------------------------------
+ausschluss_titel:
+  - payroll
+  - lohn
+  - gehaltsabrechnung
+  - entgeltabrechnung
+  - personalabrechnung
+  - lohnbuchhalt
+  - personalsachbearbeit
+  - sachbearbeiter
+  - sachbearbeitung
+  - personaladministration
+  - hr administration
+  - hr admin
+  - zeitwirtschaft
+  - assistenz
+  - assistant
+  - werkstudent
+  - aushilfe
+  - minijob
+  - "ausbildung zu"
+  - "ausbildung als"
+  - "ausbildung 202"
+  - duales studium
+  - abschlussarbeit
+  - masterarbeit
+  - bachelorarbeit
+
+# Employer Branding nur ausblenden, wenn nicht gleichzeitig ein
+# "sehr passend"-Begriff im Titel steht
+ausschluss_wenn_allein:
+  - employer branding
+
+# --- Markierungen: Stelle bleibt sichtbar, bekommt einen Hinweis ------
+markierung_seniorität: [senior, leitung, leiter, leiterin, head of, "lead ", teamlead, teamleitung, direktor, director]
+markierung_praktikum: [praktik, trainee, volontariat]
+
+# Arbeitgeber, die eventuell Personaldienstleister sind
+# (Zeitarbeit wird schon bei der Suche ausgeschlossen)
+markierung_personaldienstleister: [hays, randstad, adecco, manpower, michael page, page personnel, robert half, hapeko, amadeus fire, orizon, persona service, brunel, gi group, tempton, jobactive, arwa, piening, akzente, timepartner, office people, experis, walter people, univativ, personalberatung, personaldienst, personalvermittlung, zeitarbeit, recruiting gmbh]
+
+# Arbeitgeber aus dem öffentlichen Dienst (Wortanfang zählt)
+markierung_oeffentlich: [stadt, landeshauptstadt, hansestadt, landkreis, kreis, landschaftsverband, lwl, lvr, bezirksregierung, landesamt, bundesamt, bundesagentur, ministerium, universität, hochschule, kommunale, "land nordrhein", "freistaat", deutsche rentenversicherung, unfallkasse]
+
+# --- Wunscharbeitgeber mit Personio-Karriereseite (optional) -----------
+# Die Kennung steht in der Adresse: https://KENNUNG.jobs.personio.de
+# Beispiel:
+#   - name: Beispiel GmbH
+#     kennung: beispiel
+personio_firmen: []

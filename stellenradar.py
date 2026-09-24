@@ -2,7 +2,7 @@
 
 Quellen
   1. Jobbörse der Bundesagentur für Arbeit (öffentliche Schnittstelle)
-  2. Optional: Personio-Karriereseiten ausgewählter Wunscharbeitgeber
+  2. Karriereseiten der Arbeitgeber aus arbeitgeber.csv (siehe karriereseiten.py)
 
 Ausgabe
   docs/index.html   Übersichtsseite (wird über GitHub Pages angezeigt)
@@ -20,11 +20,14 @@ from pathlib import Path
 import requests
 import yaml
 
+import karriereseiten
+
 BASIS = Path(__file__).parent
 CONFIG = BASIS / "config.yaml"
 GEDAECHTNIS = BASIS / "data" / "stellen.json"
 VORLAGE = BASIS / "vorlage.html"
 AUSGABE = BASIS / "docs" / "index.html"
+ARBEITGEBER = BASIS / "arbeitgeber.csv"
 
 BA_URLS = [
     "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v6/jobs",
@@ -175,6 +178,11 @@ def enthaelt(text, begriffe):
     return [b for b in begriffe if b.lower() in text]
 
 
+def am_wortanfang(text, begriffe):
+    return [b for b in begriffe
+            if re.search(r"(?<![a-zäöüß])" + re.escape(b.lower()), text)]
+
+
 def enthaelt_wort(text, begriffe):
     treffer = []
     for b in begriffe:
@@ -189,7 +197,7 @@ def bewerten(stelle, cfg):
 
     punkte, stufe, stufe_punkte = 0, "", 0
     for s in cfg["bewertung"]:
-        if enthaelt(titel, s["begriffe"]) and s["punkte"] > stufe_punkte:
+        if am_wortanfang(titel, s["begriffe"]) and s["punkte"] > stufe_punkte:
             stufe, stufe_punkte = s["stufe"], s["punkte"]
     punkte = stufe_punkte
 
@@ -202,10 +210,10 @@ def bewerten(stelle, cfg):
     elif punkte == 0:
         ausgeblendet = "Kein HR-Bezug im Titel"
 
-    hinweise = []
+    hinweise = list(stelle.get("zusatz_hinweise", []))
     if stelle["befristet"]:
         hinweise.append("befristet")
-    if enthaelt(titel, cfg["markierung_seniorität"]):
+    if enthaelt(titel, cfg.get("markierung_seniorität") or []):
         hinweise.append("Seniorität prüfen")
     if enthaelt(titel, cfg["markierung_praktikum"]):
         hinweise.append("Praktikum/Trainee")
@@ -225,10 +233,15 @@ def bewerten(stelle, cfg):
 
 def schluessel(stelle):
     """Erkennt dieselbe Stelle, auch wenn sie über mehrere Suchbegriffe kam."""
-    return re.sub(r"\W+", "", (stelle["titel"] + stelle["arbeitgeber"]).lower())
+    titel = re.sub(r"\(.*?\)|\W+", "", stelle["titel"].lower())
+    return titel + re.sub(r"\W+", "", stelle["arbeitgeber"].lower())[:5]
 
 
-def sammeln(cfg):
+def ist_hr_titel_fuer(cfg):
+    return lambda titel: bewerten({"titel": titel, "arbeitgeber": "", "befristet": False}, cfg)["punkte"] >= 1
+
+
+def sammeln(cfg, cache):
     gefunden = {}
     befristungen = [2] + ([1] if cfg.get("befristete_stellen_zeigen", True) else [])
     for region in cfg["regionen"]:
@@ -245,25 +258,37 @@ def sammeln(cfg):
         for stelle in personio_firma(firma):
             gefunden.setdefault(stelle["id"], stelle)
 
+    ka_stellen, bericht = karriereseiten.ueberwachen(cfg, ARBEITGEBER, cache, ist_hr_titel_fuer(cfg))
+    PROTOKOLL["karriereseiten"] = bericht
+    # Karriereseiten zuerst, damit bei Doppelten der direkte Link gewinnt
+    alle = ka_stellen + list(gefunden.values())
+
     # Doppelte (gleicher Titel beim gleichen Arbeitgeber) zusammenfassen
     eindeutig = {}
-    for stelle in gefunden.values():
+    for stelle in alle:
         eindeutig.setdefault(schluessel(stelle), stelle)
     return list(eindeutig.values())
 
 
-def mit_gedaechtnis_abgleichen(stellen, neu_tage):
-    alt = {}
-    if GEDAECHTNIS.exists():
-        alt = json.loads(GEDAECHTNIS.read_text(encoding="utf-8"))
+def gedaechtnis_laden():
+    if not GEDAECHTNIS.exists():
+        return {}, {}
+    daten = json.loads(GEDAECHTNIS.read_text(encoding="utf-8"))
+    if "version" in daten:
+        return daten.get("stellen", {}), daten.get("karriereseiten", {})
+    return daten, {}
+
+
+def mit_gedaechtnis_abgleichen(stellen, neu_tage, alt, cache):
     for s in stellen:
         s["zuerst_gesehen"] = alt.get(s["id"], {}).get("zuerst_gesehen", HEUTE.isoformat())
         s["neu"] = (HEUTE - date.fromisoformat(s["zuerst_gesehen"])).days < neu_tage
     GEDAECHTNIS.parent.mkdir(exist_ok=True)
-    GEDAECHTNIS.write_text(
-        json.dumps({s["id"]: {"zuerst_gesehen": s["zuerst_gesehen"], "titel": s["titel"]}
-                    for s in stellen}, ensure_ascii=False, indent=1),
-        encoding="utf-8")
+    GEDAECHTNIS.write_text(json.dumps({
+        "version": 2,
+        "stellen": {s["id"]: {"zuerst_gesehen": s["zuerst_gesehen"], "titel": s["titel"]} for s in stellen},
+        "karriereseiten": cache,
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
     return stellen
 
 
@@ -273,8 +298,9 @@ def seite_schreiben(stellen, cfg):
     daten = {
         "stand": datetime.now(timezone(timedelta(hours=2))).strftime("%d.%m.%Y, %H:%M Uhr"),
         "regionen": [r["name"] for r in cfg["regionen"]]
-                    + (["Wunscharbeitgeber"] if cfg.get("personio_firmen") else []),
+                    + (["Wunscharbeitgeber"] if any(s["region"] == "Wunscharbeitgeber" for s in stellen) else []),
         "stellen": stellen,
+        "karriereseiten": PROTOKOLL.get("karriereseiten", []),
     }
     json_text = json.dumps(daten, ensure_ascii=False).replace("</", "<\\/")
     seite = VORLAGE.read_text(encoding="utf-8").replace("__DATEN__", json_text)
@@ -284,7 +310,8 @@ def seite_schreiben(stellen, cfg):
 
 def main():
     cfg = yaml.safe_load(CONFIG.read_text(encoding="utf-8"))
-    roh = sammeln(cfg)
+    alt, cache = gedaechtnis_laden()
+    roh = sammeln(cfg, cache)
 
     print(f"\nDiagnose: {PROTOKOLL['erfolgreich']} von {PROTOKOLL['anfragen']} Anfragen erfolgreich, "
           f"Schnittstelle: {_funktionierende_url or 'keine'}")
@@ -295,7 +322,7 @@ def main():
         sys.exit(1)
 
     stellen = [bewerten(s, cfg) for s in roh]
-    stellen = mit_gedaechtnis_abgleichen(stellen, cfg.get("neu_fuer_tage", 3))
+    stellen = mit_gedaechtnis_abgleichen(stellen, cfg.get("neu_fuer_tage", 3), alt, cache)
     seite_schreiben(stellen, cfg)
     sichtbar = [s for s in stellen if not s["ausgeblendet"]]
     print(f"Fertig: {len(stellen)} Stellen empfangen, {len(sichtbar)} passend, "

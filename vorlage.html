@@ -61,6 +61,16 @@ li.stelle.aus{opacity:.55}
 .aktionen button[aria-pressed="true"]{background:var(--s3);border-color:var(--s3);color:#fff}
 .leer{background:var(--flaeche);border-radius:10px;padding:28px;color:var(--leise)}
 .legende{color:var(--leise);font-size:.85rem;margin:14px 0 10px;display:flex;gap:16px;flex-wrap:wrap}
+.abdeckung{margin-top:32px;background:var(--flaeche);border-radius:10px;padding:4px 16px}
+.abdeckung summary{cursor:pointer;padding:12px 0;font-weight:600}
+.abdeckung p{color:var(--leise);font-size:.9rem;margin:0 0 12px;max-width:70ch}
+.tabelle{overflow-x:auto;margin-bottom:14px}
+.abdeckung table{border-collapse:collapse;width:100%;font-size:.88rem}
+.abdeckung th,.abdeckung td{text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--linie);vertical-align:top}
+.abdeckung th{color:var(--leise);font-weight:500}
+.abdeckung td a{color:var(--tinte)}
+.ok{color:var(--s3);font-weight:600}
+.teil{color:var(--warn)}
 @media (max-width:620px){
   .filter{position:static}
   li.stelle{grid-template-columns:10px 1fr}
@@ -90,6 +100,14 @@ li.stelle.aus{opacity:.55}
 <main><div class="innen">
   <div class="legende"><span>Balken zeigen die Passung nach Stellentitel</span><span>Markierte Stellen vor der Bewerbung genauer prüfen</span></div>
   <ol id="liste"></ol>
+  <details class="abdeckung" id="abdeckung" hidden>
+    <summary id="abdeckung-titel"></summary>
+    <p>„vollständig“ heißt, die Stellen kommen direkt aus dem Bewerbermanagementsystem des Arbeitgebers. Bei „Linksuche“ durchsucht das Radar die Karriereseite nach HR-Titeln. Lädt eine Seite ihre Stellen erst per JavaScript, bleibt sie dabei leer. Diese Arbeitgeber lohnt es sich, gelegentlich selbst anzusehen.</p>
+    <div class="tabelle"><table>
+      <thead><tr><th>Arbeitgeber</th><th>Region</th><th>System</th><th>Abdeckung</th><th>HR-Stellen</th></tr></thead>
+      <tbody id="abdeckung-liste"></tbody>
+    </table></div>
+  </details>
 </div></main>
 
 <script id="daten" type="application/json">__DATEN__</script>
@@ -159,6 +177,18 @@ function zeichnen(){
     </li>`;
   }).join('');
 }
+
+(function(){
+  const k = D.karriereseiten || [];
+  if (!k.length) return;
+  const voll = k.filter(x => x.abdeckung === 'vollständig').length;
+  $('abdeckung').hidden = false;
+  $('abdeckung-titel').textContent = `Überwachte Karriereseiten: ${k.length} Arbeitgeber, davon ${voll} vollständig abgedeckt`;
+  const rang = x => x.abdeckung === 'vollständig' ? 0 : x.abdeckung.startsWith('Linksuche') ? 1 : 2;
+  $('abdeckung-liste').innerHTML = k.slice().sort((a,b) => rang(a)-rang(b) || a.unternehmen.localeCompare(b.unternehmen,'de')).map(x =>
+    `<tr><td><a href="${esc(x.seite)}" target="_blank" rel="noopener">${esc(x.unternehmen)}</a></td><td>${esc(x.region)}</td><td>${esc(x.system)}</td>` +
+    `<td class="${x.abdeckung==='vollständig'?'ok':'teil'}">${esc(x.abdeckung)}</td><td>${x.treffer}</td></tr>`).join('');
+})();
 
 $('liste').addEventListener('click', e => {
   const b = e.target.closest('button[data-id]'); if (!b) return;

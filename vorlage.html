@@ -7,177 +7,412 @@
 <title>Stellenradar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0D2137; --grund:#E8EDF1; --flaeche:#FFFFFF; --tinte:#16222E; --leise:#5B6B7A;
-  --linie:#D3DBE2; --neu:#F2B53A; --s3:#1F7A6C; --s2:#6FAE9F; --s1:#C3D4D0; --s0:#E1E6EA;
-  --warn:#8A5A00; --warnbg:#FFF3D6;
-  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --wald:#1F3328; --moos:#34503F; --salbei:#7F9C82; --salbei-hell:#B9CCB4; --nebel:#DCE6D8;
+  --grund:#EEF3EB; --flaeche:#FAFCF8; --tinte:#1B2A21; --leise:#5A6E60; --linie:#D2DDCD;
+  --pollen:#C9DB6E; --pollen-tinte:#2E3A08; --warn:#7A5A12; --warnbg:#F5EBCB;
+  --r:14px;
+  --display:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --text:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){
-  :root{--grund:#0F1822;--flaeche:#17222E;--tinte:#E6ECF1;--leise:#9AABBA;--linie:#2A3A4A;
-    --s0:#2A3643;--s1:#3E5A56;--warn:#F2C66B;--warnbg:#3A2E12;}
+  :root{--grund:#121A15;--flaeche:#1A251E;--tinte:#E4ECE1;--leise:#9FB2A3;--linie:#2C3B31;
+        --nebel:#26352B;--warn:#E9CD84;--warnbg:#3A3218;--moos:#6F9479;}
+  .chip[aria-pressed="true"]{background:var(--moos)!important;border-color:var(--moos)!important}
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--grund);color:var(--tinte);font-family:var(--sans);font-size:16px;line-height:1.45}
-header{background:var(--navy);color:#fff;padding:calc(28px + env(safe-area-inset-top,0px)) 20px 22px}
-.innen{max-width:980px;margin:0 auto}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1;margin:0 0 10px;letter-spacing:-.01em}
-.stand{color:#B8C7D6;font-size:.95rem;margin:0}
-.zahlen{display:flex;gap:28px;margin-top:18px;flex-wrap:wrap}
-.zahl b{display:block;font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1}
-.zahl span{color:#B8C7D6;font-size:.9rem}
-.filter{position:sticky;top:0;z-index:5;background:var(--grund);border-bottom:1px solid var(--linie);padding:12px 20px}
-.filter .innen{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+html,body{margin:0;background:var(--grund);color:var(--tinte);font-family:var(--text);font-size:16px;line-height:1.5}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--pollen);outline-offset:2px;border-radius:6px}
+
+/* ---------- Kopf mit Radar ---------- */
+header{background:var(--wald);color:#EAF1E6;padding:calc(28px + env(safe-area-inset-top,0px)) 24px 30px;overflow:hidden}
+.kopf{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,7vw,5.2rem);line-height:.9;letter-spacing:-.035em;margin:0}
+.stand{color:var(--salbei-hell);margin:14px 0 0;font-size:.95rem}
+.kennzahlen{display:flex;gap:34px;margin-top:26px;flex-wrap:wrap}
+.kennzahl b{display:block;font-family:var(--display);font-weight:600;font-size:2.4rem;line-height:1}
+.kennzahl span{color:var(--salbei-hell);font-size:.88rem}
+.kennzahl.hell b{color:var(--pollen)}
+.radar{width:min(320px,36vw);aspect-ratio:1;display:block}
+.radar .ring{fill:none;stroke:#4B6A57;stroke-width:1}
+.radar .achse{stroke:#3D5A48;stroke-width:1}
+.radar .ringtext{fill:#8FAA92;font:500 9px var(--text)}
+.radar .sektortext{fill:#C4D5BF;font:600 10.5px var(--text)}
+.radar .punkt{cursor:pointer;transition:r .15s}
+.radar .punkt:hover{stroke:#fff;stroke-width:1.5}
+.radar .strahl{transform-origin:160px 160px;animation:drehen 7s linear infinite}
+@keyframes drehen{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.radar .strahl{animation:none;opacity:0}}
+
+/* ---------- Aufbau ---------- */
+.rahmen{max-width:1240px;margin:0 auto;padding:26px 24px calc(48px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:290px 1fr;gap:28px;align-items:start}
+aside{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--r);padding:18px}
+.filterkopf{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.filterkopf h2{font-family:var(--display);font-size:1.25rem;margin:0;font-weight:600}
+.link{background:none;border:0;padding:0;color:var(--moos);text-decoration:underline;cursor:pointer;font-size:.88rem}
+@media (prefers-color-scheme:dark){.link{color:var(--salbei-hell)}}
+fieldset{border:0;margin:0;padding:14px 0;box-shadow:0 -1px 0 var(--linie)}
+fieldset:first-of-type{box-shadow:none}
+legend{float:left;width:100%;font-weight:600;font-size:.92rem;padding:0;margin-bottom:8px}
+legend+*{clear:both}
+.suchfeld{width:100%;padding:9px 12px;border:1px solid var(--linie);border-radius:10px;background:var(--grund)}
+.segment{display:flex;background:var(--grund);border:1px solid var(--linie);border-radius:10px;padding:3px;gap:2px}
+.segment button{flex:1;border:0;background:transparent;border-radius:7px;padding:6px 4px;font-size:.84rem;cursor:pointer;color:var(--leise)}
+.segment button[aria-pressed="true"]{background:var(--moos);color:#fff;font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--linie);background:var(--flaeche);color:var(--tinte);border-radius:999px;padding:5px 12px;font:inherit;font-size:.9rem;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
-select,input[type=search]{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--linie);border-radius:8px;background:var(--flaeche);color:var(--tinte)}
-input[type=search]{min-width:180px;flex:1}
-label.check{font-size:.9rem;display:flex;gap:6px;align-items:center;cursor:pointer}
-:focus-visible{outline:2px solid var(--neu);outline-offset:2px}
-main{padding:10px 20px calc(40px + env(safe-area-inset-bottom,0px))}
-ol{list-style:none;margin:0;padding:0}
-li.stelle{display:grid;grid-template-columns:14px 1fr auto;gap:14px;background:var(--flaeche);border-bottom:1px solid var(--linie);padding:14px 16px 14px 14px}
-li.stelle:first-child{border-radius:10px 10px 0 0}
-li.stelle:last-child{border-radius:0 0 10px 10px;border-bottom:0}
-li.stelle.aus{opacity:.55}
-.signal{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:3px;padding-top:6px}
-.signal i{display:block;height:9px;border-radius:2px;background:var(--s0)}
-.p1 .signal i:nth-child(-n+1){background:var(--s1)}
-.p2 .signal i:nth-child(-n+2){background:var(--s2)}
-.p3 .signal i:nth-child(-n+3){background:var(--s3)}
-.titel{font-weight:600;font-size:1.05rem;color:var(--tinte);text-decoration:none}
-.titel:hover{text-decoration:underline}
-.neu{display:inline-block;background:var(--neu);color:#2A1C00;font-size:.75rem;font-weight:600;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px}
-.meta{color:var(--leise);font-size:.9rem;margin-top:2px}
-.hinweise{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-.hinweis{font-size:.78rem;background:var(--warnbg);color:var(--warn);border-radius:4px;padding:1px 7px}
-.grund{font-size:.8rem;color:var(--leise);margin-top:4px;font-style:italic}
-.aktionen{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
-.aktionen button{font:inherit;font-size:.8rem;border:1px solid var(--linie);background:transparent;color:var(--leise);border-radius:6px;padding:3px 9px;cursor:pointer;white-space:nowrap}
-.aktionen button[aria-pressed="true"]{background:var(--s3);border-color:var(--s3);color:#fff}
-.leer{background:var(--flaeche);border-radius:10px;padding:28px;color:var(--leise)}
-.legende{color:var(--leise);font-size:.85rem;margin:14px 0 10px;display:flex;gap:16px;flex-wrap:wrap}
-.abdeckung{margin-top:32px;background:var(--flaeche);border-radius:10px;padding:4px 16px}
-.abdeckung summary{cursor:pointer;padding:12px 0;font-weight:600}
-.abdeckung p{color:var(--leise);font-size:.9rem;margin:0 0 12px;max-width:70ch}
+.chip{border:1px solid var(--linie);background:var(--grund);border-radius:999px;padding:5px 11px;font-size:.86rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--wald);border-color:var(--wald);color:#fff}
+.chip small{opacity:.7;margin-left:3px}
+.schalter{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.9rem;padding:4px 0;cursor:pointer}
+.schalter input{appearance:none;width:36px;height:20px;border-radius:999px;background:var(--linie);position:relative;cursor:pointer;flex:none;margin:0}
+.schalter input::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .15s}
+.schalter input:checked{background:var(--moos)}
+.schalter input:checked::after{left:18px}
+select.auswahl{width:100%;padding:8px 10px;border:1px solid var(--linie);border-radius:10px;background:var(--grund)}
+.filterknopf{display:none}
+
+/* ---------- Ergebnisliste ---------- */
+.ergebniskopf{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:2px 0 14px;flex-wrap:wrap}
+.ergebniskopf h2{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:0}
+.ergebniskopf p{margin:0;color:var(--leise);font-size:.9rem}
+ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.stelle{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--r);padding:16px 18px;display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:start;scroll-margin-top:20px}
+.stelle.aus{opacity:.55}
+.stelle.blitz{animation:blitz 1.4s ease-out}
+@keyframes blitz{from{box-shadow:0 0 0 3px var(--pollen)}to{box-shadow:0 0 0 0 transparent}}
+.passung{width:34px;height:34px}
+.passung circle{fill:none;stroke-width:4;stroke-linecap:round}
+.titel{font-family:var(--display);font-weight:600;font-size:1.14rem;line-height:1.25;color:var(--tinte);text-decoration:none}
+.titel:hover{text-decoration:underline;text-decoration-color:var(--salbei)}
+.neu{display:inline-block;background:var(--pollen);color:var(--pollen-tinte);font-size:.72rem;font-weight:600;border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:3px}
+.firma{margin-top:3px;font-weight:500}
+.ort{color:var(--leise);font-size:.9rem}
+.marken{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.marke{font-size:.76rem;border-radius:6px;padding:1px 8px;background:var(--nebel);color:var(--tinte)}
+.marke.warn{background:var(--warnbg);color:var(--warn)}
+.grund{font-size:.8rem;color:var(--leise);margin-top:6px;font-style:italic}
+.seite{display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right;min-width:128px}
+.alter b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:600;line-height:1}
+.alter span{font-size:.8rem;color:var(--leise)}
+.knoepfe{display:flex;gap:6px}
+.knoepfe button{font-size:.78rem;border:1px solid var(--linie);background:transparent;border-radius:8px;padding:4px 9px;cursor:pointer;color:var(--leise)}
+.knoepfe button[aria-pressed="true"]{background:var(--moos);border-color:var(--moos);color:#fff}
+.leer{background:var(--flaeche);border:1px dashed var(--salbei);border-radius:var(--r);padding:28px;color:var(--leise)}
+
+/* ---------- Abdeckung ---------- */
+.abdeckung{margin-top:30px;background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--r);padding:4px 18px}
+.abdeckung summary{cursor:pointer;padding:14px 0;font-weight:600}
+.abdeckung p{color:var(--leise);font-size:.9rem;margin:0 0 12px;max-width:72ch}
 .tabelle{overflow-x:auto;margin-bottom:14px}
 .abdeckung table{border-collapse:collapse;width:100%;font-size:.88rem}
-.abdeckung th,.abdeckung td{text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--linie);vertical-align:top}
+.abdeckung th,.abdeckung td{text-align:left;padding:7px 12px 7px 0;border-bottom:1px solid var(--linie);vertical-align:top}
 .abdeckung th{color:var(--leise);font-weight:500}
 .abdeckung td a{color:var(--tinte)}
-.ok{color:var(--s3);font-weight:600}
+.ok{color:var(--moos);font-weight:600}
+@media (prefers-color-scheme:dark){.ok{color:var(--salbei-hell)}}
 .teil{color:var(--warn)}
-@media (max-width:620px){
-  .filter{position:static}
-  li.stelle{grid-template-columns:10px 1fr}
-  .aktionen{grid-column:2;flex-direction:row;align-items:center}
+
+/* ---------- Mobil ---------- */
+@media (max-width:900px){
+  .kopf{grid-template-columns:1fr}
+  .radar{width:min(250px,70vw);margin:0 auto}
+  .kennzahlen{gap:16px 28px;margin-top:20px}
+  .kennzahl b{font-size:1.9rem}
+  .rahmen{grid-template-columns:1fr;padding-top:16px}
+  aside{position:static;max-height:none;display:none}
+  aside.offen{display:block}
+  .filterknopf{display:flex;justify-content:space-between;align-items:center;width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--linie);background:var(--flaeche);font-weight:600;cursor:pointer}
+}
+@media (max-width:600px){
+  header{padding-left:18px;padding-right:18px}
+  .rahmen{padding-left:14px;padding-right:14px}
+  .stelle{grid-template-columns:28px 1fr;gap:12px;padding:14px}
+  .passung{width:28px;height:28px}
+  .seite{grid-column:2;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;text-align:left;min-width:0;gap:8px}
+  .alter b{display:inline;font-size:1.1rem;margin-right:4px}
 }
 </style>
 </head>
 <body>
-<header><div class="innen">
-  <h1>Stellenradar</h1>
-  <p class="stand" id="stand"></p>
-  <div class="zahlen" id="zahlen"></div>
-</div></header>
+<header>
+  <div class="kopf">
+    <div>
+      <h1>Stellenradar</h1>
+      <p class="stand" id="stand"></p>
+      <div class="kennzahlen" id="kennzahlen"></div>
+    </div>
+    <svg class="radar" id="radar" viewBox="0 0 320 320" role="img" aria-label="Radar der passenden Stellen nach Region und Alter"></svg>
+  </div>
+</header>
 
-<div class="filter"><div class="innen">
-  <div class="chips" id="regionen" role="group" aria-label="Regionen"></div>
-  <select id="mindest" aria-label="Mindestens">
-    <option value="1">Alle mit HR-Bezug</option>
-    <option value="2" selected>Ab passend</option>
-    <option value="3">Nur sehr passend</option>
-  </select>
-  <input type="search" id="suche" placeholder="Titel oder Arbeitgeber suchen">
-  <label class="check"><input type="checkbox" id="nurneu"> Nur neue</label>
-  <label class="check"><input type="checkbox" id="zeigeaus"> Ausgeblendete zeigen</label>
-</div></div>
+<div class="rahmen">
+  <button class="filterknopf" id="filterknopf" aria-expanded="false" aria-controls="filter">
+    <span>Filter</span><span id="filterzahl"></span>
+  </button>
 
-<main><div class="innen">
-  <div class="legende"><span>Balken zeigen die Passung nach Stellentitel</span><span>Markierte Stellen vor der Bewerbung genauer prüfen</span></div>
-  <ol id="liste"></ol>
-  <details class="abdeckung" id="abdeckung" hidden>
-    <summary id="abdeckung-titel"></summary>
-    <p>„vollständig“ heißt, die Stellen kommen direkt aus dem Bewerbermanagementsystem des Arbeitgebers. Bei „Linksuche“ durchsucht das Radar die Karriereseite nach HR-Titeln. Lädt eine Seite ihre Stellen erst per JavaScript, bleibt sie dabei leer. Diese Arbeitgeber lohnt es sich, gelegentlich selbst anzusehen.</p>
-    <div class="tabelle"><table>
-      <thead><tr><th>Arbeitgeber</th><th>Region</th><th>System</th><th>Abdeckung</th><th>HR-Stellen</th></tr></thead>
-      <tbody id="abdeckung-liste"></tbody>
-    </table></div>
-  </details>
-</div></main>
+  <aside id="filter">
+    <div class="filterkopf"><h2>Filter</h2><button class="link" id="zuruecksetzen">Zurücksetzen</button></div>
+
+    <fieldset>
+      <legend>Suche</legend>
+      <input class="suchfeld" type="search" id="suche" placeholder="Titel, Arbeitgeber oder Ort">
+    </fieldset>
+
+    <fieldset>
+      <legend>Region</legend>
+      <div class="chips" id="regionen"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Passung</legend>
+      <div class="segment" data-feld="passung">
+        <button data-wert="1">Alle HR</button><button data-wert="2">Passend</button><button data-wert="3">Sehr</button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Online seit höchstens</legend>
+      <div class="segment" data-feld="alter">
+        <button data-wert="0">Egal</button><button data-wert="3">3 T.</button><button data-wert="7">7 T.</button><button data-wert="14">14 T.</button><button data-wert="30">30 T.</button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quelle</legend>
+      <div class="chips" id="quellen"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Ausblenden</legend>
+      <label class="schalter">Befristete Stellen <input type="checkbox" data-aus="befristet"></label>
+      <label class="schalter">Öffentlicher Dienst <input type="checkbox" data-aus="öffentlicher Dienst"></label>
+      <label class="schalter">Mögliche Personaldienstleister <input type="checkbox" data-aus="Personaldienstleister?"></label>
+      <label class="schalter">Praktikum und Trainee <input type="checkbox" data-aus="Praktikum/Trainee"></label>
+      <label class="schalter">Ort unklar <input type="checkbox" data-aus="Ort prüfen"></label>
+      <label class="schalter">Arbeitgeber mit Status <input type="checkbox" data-aus="Arbeitgeber:"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Meine Markierungen</legend>
+      <div class="segment" data-feld="markierung">
+        <button data-wert="offen">Offen</button><button data-wert="beworben">Beworben</button><button data-wert="alle">Alle</button>
+      </div>
+      <label class="schalter" style="margin-top:8px">Vom Radar Aussortiertes zeigen <input type="checkbox" id="aussortiert"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Sortierung</legend>
+      <select class="auswahl" id="sortierung">
+        <option value="passung">Beste Passung zuerst</option>
+        <option value="neu">Neueste zuerst</option>
+        <option value="alt">Am längsten online zuerst</option>
+        <option value="firma">Arbeitgeber A bis Z</option>
+      </select>
+    </fieldset>
+  </aside>
+
+  <main>
+    <div class="ergebniskopf"><h2 id="anzahl"></h2><p>Links führen direkt zur Ausschreibung</p></div>
+    <ol id="liste"></ol>
+
+    <details class="abdeckung" id="abdeckung" hidden>
+      <summary id="abdeckung-titel"></summary>
+      <p>„vollständig“ heißt, die Stellen kommen direkt aus dem Bewerbermanagementsystem des Arbeitgebers. Bei „Linksuche“ durchsucht das Radar die Karriereseite nach Stellentiteln. Lädt eine Seite ihre Stellen erst per JavaScript, bleibt sie dabei leer. Diese Arbeitgeber lohnt es sich, gelegentlich selbst anzusehen.</p>
+      <div class="tabelle"><table>
+        <thead><tr><th>Arbeitgeber</th><th>Region</th><th>System</th><th>Abdeckung</th><th>HR-Stellen</th></tr></thead>
+        <tbody id="abdeckung-liste"></tbody>
+      </table></div>
+    </details>
+  </main>
+</div>
 
 <script id="daten" type="application/json">__DATEN__</script>
 <script>
 const D = JSON.parse(document.getElementById('daten').textContent);
-const SPEICHER = 'stellenradar-v1';
-let merk = {};
-try { merk = JSON.parse(localStorage.getItem(SPEICHER)) || {}; } catch (e) { merk = {}; }
-function sichern(){ try { localStorage.setItem(SPEICHER, JSON.stringify(merk)); } catch (e) {} }
-
-const aktiv = new Set(D.regionen);
 const $ = id => document.getElementById(id);
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-$('stand').textContent = 'Zuletzt aktualisiert am ' + D.stand;
+// ---------- Speicher ----------
+function laden(k, standard){ try { return JSON.parse(localStorage.getItem(k)) ?? standard; } catch(e){ return standard; } }
+function sichern(k, w){ try { localStorage.setItem(k, JSON.stringify(w)); } catch(e){} }
+const merk = laden('stellenradar-v1', {});
+const STANDARD = {suche:'', regionen:D.regionen.slice(), passung:'2', alter:'0', quellen:['Arbeitsagentur','Karriereseite'],
+                  aus:[], markierung:'offen', aussortiert:false, sortierung:'passung'};
+const kopie = o => JSON.parse(JSON.stringify(o));
+let F = Object.assign(kopie(STANDARD), laden('stellenradar-filter', {}));
+F.regionen = F.regionen.filter(r => D.regionen.includes(r));
+if (!F.regionen.length) F.regionen = D.regionen.slice();
 
-D.regionen.forEach(r => {
-  const b = document.createElement('button');
-  b.className = 'chip'; b.textContent = r; b.setAttribute('aria-pressed','true');
-  b.onclick = () => { aktiv.has(r) ? aktiv.delete(r) : aktiv.add(r); b.setAttribute('aria-pressed', aktiv.has(r)); zeichnen(); };
-  $('regionen').appendChild(b);
-});
-['mindest','suche','nurneu','zeigeaus'].forEach(id => $(id).addEventListener('input', zeichnen));
+// ---------- Datum ----------
+const heute = new Date(); heute.setHours(0,0,0,0);
+function tage(iso){ if(!iso) return null; const d = new Date(iso.slice(0,10)+'T00:00:00'); return Math.max(0, Math.round((heute - d)/864e5)); }
+function datum(iso){ const [j,m,t] = iso.slice(0,10).split('-'); return `${t}.${m}.${j}`; }
+function alterText(n){ return n === 0 ? 'heute' : n === 1 ? 'seit 1 Tag' : `seit ${n} Tagen`; }
+D.stellen.forEach(s => { s._tage = tage(s.datum || s.veroeffentlicht || s.zuerst_gesehen); s.quellen = s.quellen || [s.quelle]; });
 
-function datum(iso){ if(!iso) return ''; const [j,m,t] = iso.slice(0,10).split('-'); return t+'.'+m+'.'+j; }
-function esc(t){ return String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+$('stand').textContent = 'Aktualisiert am ' + D.stand;
 
-function zeichnen(){
-  const min = +$('mindest').value, q = $('suche').value.trim().toLowerCase();
-  const nurNeu = $('nurneu').checked, zeigeAus = $('zeigeaus').checked;
-  const sichtbar = D.stellen.filter(s => {
+// ---------- Filteroberfläche ----------
+function zaehlen(pred){ return D.stellen.filter(s => !s.ausgeblendet && s.punkte >= 2 && pred(s)).length; }
+$('regionen').innerHTML = D.regionen.map(r => `<button class="chip" data-region="${esc(r)}">${esc(r)}<small>${zaehlen(s=>s.region===r)}</small></button>`).join('');
+$('quellen').innerHTML = ['Arbeitsagentur','Karriereseite'].map(q => `<button class="chip" data-quelle="${q}">${q}<small>${zaehlen(s=>s.quellen.includes(q))}</small></button>`).join('');
+
+function oberflaeche(){
+  $('suche').value = F.suche;
+  document.querySelectorAll('[data-region]').forEach(b => b.setAttribute('aria-pressed', F.regionen.includes(b.dataset.region)));
+  document.querySelectorAll('[data-quelle]').forEach(b => b.setAttribute('aria-pressed', F.quellen.includes(b.dataset.quelle)));
+  document.querySelectorAll('.segment').forEach(seg => seg.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', F[seg.dataset.feld] === b.dataset.wert)));
+  document.querySelectorAll('[data-aus]').forEach(c => c.checked = F.aus.includes(c.dataset.aus));
+  $('aussortiert').checked = F.aussortiert;
+  $('sortierung').value = F.sortierung;
+  const aktiv = ['suche','passung','alter','markierung','aussortiert','sortierung'].filter(k => String(F[k]) !== String(STANDARD[k])).length
+              + (F.regionen.length !== D.regionen.length) + (F.quellen.length !== 2) + F.aus.length;
+  $('filterzahl').textContent = aktiv ? `${aktiv} aktiv` : '';
+}
+function umschalten(liste, wert){ const i = liste.indexOf(wert); i >= 0 ? liste.splice(i,1) : liste.push(wert); }
+function aendern(){ sichern('stellenradar-filter', F); oberflaeche(); zeichnen(); }
+
+$('suche').addEventListener('input', e => { F.suche = e.target.value; sichern('stellenradar-filter', F); zeichnen(); });
+$('regionen').addEventListener('click', e => { const b = e.target.closest('[data-region]'); if(b){ umschalten(F.regionen, b.dataset.region); aendern(); }});
+$('quellen').addEventListener('click', e => { const b = e.target.closest('[data-quelle]'); if(b){ umschalten(F.quellen, b.dataset.quelle); aendern(); }});
+document.querySelectorAll('.segment').forEach(seg => seg.addEventListener('click', e => { const b = e.target.closest('button'); if(b){ F[seg.dataset.feld] = b.dataset.wert; aendern(); }}));
+document.querySelectorAll('[data-aus]').forEach(c => c.addEventListener('change', () => { umschalten(F.aus, c.dataset.aus); aendern(); }));
+$('aussortiert').addEventListener('change', e => { F.aussortiert = e.target.checked; aendern(); });
+$('sortierung').addEventListener('change', e => { F.sortierung = e.target.value; aendern(); });
+$('zuruecksetzen').addEventListener('click', () => { F = kopie(STANDARD); aendern(); });
+$('filterknopf').addEventListener('click', () => { const o = $('filter').classList.toggle('offen'); $('filterknopf').setAttribute('aria-expanded', o); });
+
+// ---------- Filtern ----------
+function gefiltert(){
+  const q = F.suche.trim().toLowerCase();
+  const liste = D.stellen.filter(s => {
     const status = merk[s.id];
-    const aus = s.ausgeblendet || status === 'weg';
-    if (aus && !zeigeAus) return false;
-    if (!aus && s.punkte < min) return false;
-    if (!aktiv.has(s.region)) return false;
-    if (nurNeu && !s.neu) return false;
-    if (q && !(s.titel + ' ' + s.arbeitgeber).toLowerCase().includes(q)) return false;
+    const radarAus = !!s.ausgeblendet;
+    if (radarAus && !F.aussortiert) return false;
+    if (!radarAus && s.punkte < +F.passung) return false;
+    if (F.markierung === 'offen' && status) return false;
+    if (F.markierung === 'beworben' && status !== 'beworben') return false;
+    if (!F.regionen.includes(s.region)) return false;
+    if (!s.quellen.some(x => F.quellen.includes(x))) return false;
+    if (+F.alter && (s._tage === null || s._tage > +F.alter)) return false;
+    if (F.aus.some(a => s.hinweise.some(h => h.startsWith(a)))) return false;
+    if (q && !(s.titel + ' ' + s.arbeitgeber + ' ' + s.ort).toLowerCase().includes(q)) return false;
     return true;
   });
+  const t = s => s._tage ?? 999;
+  const sortierer = {
+    passung: (a,b) => b.punkte - a.punkte || (b.neu - a.neu) || t(a) - t(b),
+    neu: (a,b) => t(a) - t(b) || b.punkte - a.punkte,
+    alt: (a,b) => t(b) - t(a),
+    firma: (a,b) => a.arbeitgeber.localeCompare(b.arbeitgeber, 'de') || b.punkte - a.punkte,
+  };
+  return liste.sort(sortierer[F.sortierung] || sortierer.passung);
+}
 
-  const passend = D.stellen.filter(s => !s.ausgeblendet && merk[s.id] !== 'weg' && s.punkte >= 2);
-  $('zahlen').innerHTML =
-    `<div class="zahl"><b>${passend.length}</b><span>passende Stellen</span></div>` +
-    `<div class="zahl"><b>${passend.filter(s=>s.neu).length}</b><span>davon neu</span></div>` +
-    `<div class="zahl"><b>${Object.values(merk).filter(v=>v==='beworben').length}</b><span>als beworben markiert</span></div>`;
+// ---------- Passungsanzeige ----------
+function passung(p){
+  const farben = ['var(--linie)','var(--linie)','var(--linie)'];
+  for (let i = 0; i < p; i++) farben[i] = p === 3 ? 'var(--moos)' : 'var(--salbei)';
+  const U = 2*Math.PI*13, teil = U/3;
+  return `<svg class="passung" viewBox="0 0 34 34" aria-label="Passung ${p} von 3">` + farben.map((f,i) =>
+    `<circle cx="17" cy="17" r="13" stroke="${f}" stroke-dasharray="${teil-4} ${U-teil+4}" stroke-dashoffset="${-i*teil}" transform="rotate(-90 17 17)"/>`).join('') + '</svg>';
+}
 
-  if (!sichtbar.length){
-    $('liste').innerHTML = '<li class="leer">Keine Stellen für diese Auswahl. Regionen erweitern oder „Alle mit HR-Bezug“ wählen.</li>';
+// ---------- Liste ----------
+function ortText(s){
+  const ort = (s.ort || '').trim(), reg = s.region || '';
+  if (!ort) return esc(reg);
+  const kurz = ort.replace(/^\d{5}\s*/, '').toLowerCase();
+  return reg.toLowerCase().startsWith(kurz) ? esc(ort) : `${esc(ort)}, ${esc(reg)}`;
+}
+function zeichnen(){
+  const liste = gefiltert();
+  $('anzahl').textContent = liste.length === 1 ? '1 Stelle' : `${liste.length} Stellen`;
+  kennzahlen(); radar(liste);
+  if (!liste.length){
+    $('liste').innerHTML = '<li class="leer">Keine Stelle passt zu diesen Filtern. „Zurücksetzen“ zeigt wieder alles.</li>';
     return;
   }
-  $('liste').innerHTML = sichtbar.map(s => {
+  $('liste').innerHTML = liste.map(s => {
     const status = merk[s.id];
-    const aus = s.ausgeblendet || status === 'weg';
-    const grund = s.ausgeblendet ? s.ausgeblendet : (status === 'weg' ? 'Von dir ausgeblendet' : '');
-    return `<li class="stelle p${s.punkte} ${aus?'aus':''}">
-      <div class="signal" title="${esc(s.stufe || 'kein Treffer')}"><i></i><i></i><i></i></div>
+    const marken = s.hinweise.map(h => `<span class="marke warn">${esc(h)}</span>`)
+      .concat(s.quellen.map(q => `<span class="marke">${esc(q)}</span>`)).join('');
+    const alter = s._tage === null ? '' : `<div class="alter"><b>${s._tage === 0 ? 'heute' : s._tage === 1 ? '1 Tag' : s._tage + ' Tage'}</b><span>${s.datum_art === 'entdeckt' ? 'entdeckt am ' : 'online seit '}${datum(s.datum || s.zuerst_gesehen)}</span></div>`;
+    return `<li class="stelle ${s.ausgeblendet || status === 'weg' ? 'aus' : ''}" id="s-${esc(s.id).replace(/[^a-zA-Z0-9_-]/g,'_')}">
+      ${passung(s.punkte)}
       <div>
-        <a class="titel" href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.titel)}</a>${s.neu?'<span class="neu">neu</span>':''}
-        <div class="meta">${esc(s.arbeitgeber)}${s.ort?', '+esc(s.ort):''}<br>${esc(s.region)}${s.veroeffentlicht?', online seit '+datum(s.veroeffentlicht):''}</div>
-        ${s.hinweise.length?`<div class="hinweise">${s.hinweise.map(h=>`<span class="hinweis">${esc(h)}</span>`).join('')}</div>`:''}
-        ${grund?`<div class="grund">${esc(grund)}</div>`:''}
+        <a class="titel" href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.titel)}</a>${s.neu ? '<span class="neu">neu</span>' : ''}
+        <div class="firma">${esc(s.arbeitgeber)}</div>
+        <div class="ort">${ortText(s)}</div>
+        <div class="marken">${marken}</div>
+        ${s.ausgeblendet ? `<div class="grund">Aussortiert: ${esc(s.ausgeblendet)}</div>` : ''}
       </div>
-      <div class="aktionen">
-        <button data-id="${esc(s.id)}" data-art="beworben" aria-pressed="${status==='beworben'}">Beworben</button>
-        <button data-id="${esc(s.id)}" data-art="weg" aria-pressed="${status==='weg'}">${status==='weg'?'Wieder zeigen':'Ausblenden'}</button>
+      <div class="seite">
+        ${alter}
+        <div class="knoepfe">
+          <button data-id="${esc(s.id)}" data-art="beworben" aria-pressed="${status === 'beworben'}">Beworben</button>
+          <button data-id="${esc(s.id)}" data-art="weg" aria-pressed="${status === 'weg'}">${status === 'weg' ? 'Zurückholen' : 'Ausblenden'}</button>
+        </div>
       </div>
     </li>`;
   }).join('');
 }
+$('liste').addEventListener('click', e => {
+  const b = e.target.closest('button[data-id]'); if (!b) return;
+  const {id, art} = b.dataset;
+  merk[id] === art ? delete merk[id] : merk[id] = art;
+  sichern('stellenradar-v1', merk); zeichnen();
+});
 
+function kennzahlen(){
+  const passend = D.stellen.filter(s => !s.ausgeblendet && s.punkte >= 2 && merk[s.id] !== 'weg');
+  const woche = passend.filter(s => s._tage !== null && s._tage <= 7).length;
+  $('kennzahlen').innerHTML =
+    `<div class="kennzahl"><b>${passend.length}</b><span>passende Stellen</span></div>` +
+    `<div class="kennzahl hell"><b>${passend.filter(s => s.neu).length}</b><span>neu entdeckt</span></div>` +
+    `<div class="kennzahl"><b>${woche}</b><span>in den letzten 7 Tagen online</span></div>` +
+    `<div class="kennzahl"><b>${Object.values(merk).filter(v => v === 'beworben').length}</b><span>beworben</span></div>`;
+}
+
+// ---------- Radar ----------
+function streuung(text){ let h = 2166136261; for (const c of text) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return ((h >>> 0) % 1000) / 1000; }
+function radar(liste){
+  const C = 160, R = 128, n = D.regionen.length, sektor = 2*Math.PI/n;
+  const ringe = [3, 7, 14, 30], radius = t => 14 + (R-14) * Math.sqrt(Math.min(t ?? 30, 30) / 30);
+  let svg = `<defs><radialGradient id="glut"><stop offset="0" stop-color="#C9DB6E" stop-opacity=".35"/><stop offset="1" stop-color="#C9DB6E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="strahl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9DB6E" stop-opacity="0"/><stop offset="1" stop-color="#C9DB6E" stop-opacity=".28"/></linearGradient></defs>`;
+  svg += `<circle cx="${C}" cy="${C}" r="${R}" fill="#26402F"/>`;
+  ringe.forEach(t => { svg += `<circle class="ring" cx="${C}" cy="${C}" r="${radius(t)}"/><text class="ringtext" x="${C+3}" y="${C - radius(t) + 11}">${t} T.</text>`; });
+  for (let i = 0; i < n; i++){
+    const w = -Math.PI/2 + i*sektor;
+    svg += `<line class="achse" x1="${C}" y1="${C}" x2="${C + R*Math.cos(w)}" y2="${C + R*Math.sin(w)}"/>`;
+    const m = w + sektor/2, lr = R + 16, x = C + lr*Math.cos(m), y = C + lr*Math.sin(m);
+    const name = D.regionen[i].split('/')[0];
+    svg += `<text class="sektortext" x="${x}" y="${y + 3}" text-anchor="${Math.cos(m) > .3 ? 'start' : Math.cos(m) < -.3 ? 'end' : 'middle'}">${esc(name)}</text>`;
+  }
+  const w0 = -Math.PI/2, spitze = 0.5;
+  svg += `<g class="strahl"><path d="M${C},${C} L${C + R*Math.cos(w0)},${C + R*Math.sin(w0)} A${R},${R} 0 0,1 ${C + R*Math.cos(w0+spitze)},${C + R*Math.sin(w0+spitze)} Z" fill="url(#strahl)"/></g>`;
+  svg += `<circle cx="${C}" cy="${C}" r="10" fill="url(#glut)"/><circle cx="${C}" cy="${C}" r="2.5" fill="#C9DB6E"/>`;
+  liste.filter(s => !s.ausgeblendet).forEach(s => {
+    const i = D.regionen.indexOf(s.region); if (i < 0) return;
+    const w = -Math.PI/2 + i*sektor + sektor*(0.1 + 0.8*streuung(s.id));
+    const r = radius(s._tage) + (streuung(s.id + 'r') - .5) * 6;
+    const farbe = s.punkte === 3 ? '#C9DB6E' : s.punkte === 2 ? '#A9C2A4' : '#6E8C75';
+    svg += `<circle class="punkt" data-ziel="${esc(s.id)}" cx="${(C + r*Math.cos(w)).toFixed(1)}" cy="${(C + r*Math.sin(w)).toFixed(1)}" r="${s.punkte === 3 ? 4.2 : 3.2}" fill="${farbe}"><title>${esc(s.titel)}, ${esc(s.arbeitgeber)}</title></circle>`;
+  });
+  $('radar').innerHTML = svg;
+}
+$('radar').addEventListener('click', e => {
+  const p = e.target.closest('.punkt'); if (!p) return;
+  const el = document.getElementById('s-' + p.dataset.ziel.replace(/[^a-zA-Z0-9_-]/g,'_'));
+  if (el){ el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'center'});
+           el.classList.remove('blitz'); void el.offsetWidth; el.classList.add('blitz'); }
+});
+
+// ---------- Abdeckung ----------
 (function(){
   const k = D.karriereseiten || [];
   if (!k.length) return;
@@ -187,17 +422,10 @@ function zeichnen(){
   const rang = x => x.abdeckung === 'vollständig' ? 0 : x.abdeckung.startsWith('Linksuche') ? 1 : 2;
   $('abdeckung-liste').innerHTML = k.slice().sort((a,b) => rang(a)-rang(b) || a.unternehmen.localeCompare(b.unternehmen,'de')).map(x =>
     `<tr><td><a href="${esc(x.seite)}" target="_blank" rel="noopener">${esc(x.unternehmen)}</a></td><td>${esc(x.region)}</td><td>${esc(x.system)}</td>` +
-    `<td class="${x.abdeckung==='vollständig'?'ok':'teil'}">${esc(x.abdeckung)}</td><td>${x.treffer}</td></tr>`).join('');
+    `<td class="${x.abdeckung === 'vollständig' ? 'ok' : 'teil'}">${esc(x.abdeckung)}</td><td>${x.treffer}</td></tr>`).join('');
 })();
 
-$('liste').addEventListener('click', e => {
-  const b = e.target.closest('button[data-id]'); if (!b) return;
-  const id = b.dataset.id, art = b.dataset.art;
-  merk[id] === art ? delete merk[id] : merk[id] = art;
-  sichern(); zeichnen();
-});
-
-zeichnen();
+oberflaeche(); zeichnen();
 </script>
 </body>
 </html>

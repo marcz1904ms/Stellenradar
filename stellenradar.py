@@ -124,7 +124,13 @@ def ba_stelle_umwandeln(roh, region_name, befristet):
     if not isinstance(ort, dict):
         ort = {"ort": str(ort)}
     datum = str(_erstes(roh, "aktuelleVeroeffentlichungsdatum", "veroeffentlichungsdatum",
-                        "ersteVeroeffentlichungsdatum", "modifikationsTimestamp") or "")[:10]
+                        "ersteVeroeffentlichungsdatum", "veroeffentlichtAm", "datumVeroeffentlichung") or "")[:10]
+    if not re.match(r"\d{4}-\d{2}-\d{2}", datum):
+        # Neuere Versionen benennen das Feld anders: jedes Datumsfeld mit "veroeffentlich" nehmen
+        datum = next((str(v)[:10] for k, v in roh.items()
+                      if "veroeffentlich" in k.lower() and re.match(r"\d{4}-\d{2}-\d{2}", str(v))), "")
+    if not datum:
+        datum = str(roh.get("modifikationsTimestamp") or "")[:10]
     link = _erstes(roh, "externeUrl", "externeURL")
     if not link:
         link = BA_DETAIL.format(refnr) if refnr else (
@@ -266,7 +272,19 @@ def sammeln(cfg, cache):
     # Doppelte (gleicher Titel beim gleichen Arbeitgeber) zusammenfassen
     eindeutig = {}
     for stelle in alle:
-        eindeutig.setdefault(schluessel(stelle), stelle)
+        k = schluessel(stelle)
+        if k not in eindeutig:
+            eindeutig[k] = stelle
+            continue
+        erste = eindeutig[k]
+        # Stelle steht auf der Karriereseite und bei der Arbeitsagentur:
+        # Datum der Arbeitsagentur übernehmen
+        if not erste.get("veroeffentlicht") and stelle.get("veroeffentlicht"):
+            erste["veroeffentlicht"] = stelle["veroeffentlicht"]
+        if stelle["quelle"] not in erste.get("quellen", [erste["quelle"]]):
+            erste["quellen"] = erste.get("quellen", [erste["quelle"]]) + [stelle["quelle"]]
+    for stelle in eindeutig.values():
+        stelle.setdefault("quellen", [stelle["quelle"]])
     return list(eindeutig.values())
 
 
@@ -293,6 +311,11 @@ def mit_gedaechtnis_abgleichen(stellen, neu_tage, alt, cache):
 
 
 def seite_schreiben(stellen, cfg):
+    for s in stellen:
+        if re.match(r"\d{4}-\d{2}-\d{2}", s.get("veroeffentlicht") or ""):
+            s["datum"], s["datum_art"] = s["veroeffentlicht"][:10], "online"
+        else:
+            s["datum"], s["datum_art"] = s["zuerst_gesehen"], "entdeckt"
     stellen.sort(key=lambda s: s["veroeffentlicht"], reverse=True)
     stellen.sort(key=lambda s: (-s["punkte"], not s["neu"]))
     daten = {

@@ -27,10 +27,15 @@ VORLAGE = BASIS / "vorlage.html"
 AUSGABE = BASIS / "docs" / "index.html"
 
 BA_URLS = [
-    "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs",
     "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v6/jobs",
+    "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/app/jobs",
+    "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs",
 ]
-BA_HEADER = {"X-API-Key": "jobboerse-jobsuche", "User-Agent": "Stellenradar (privat)"}
+BA_HEADER = {
+    "X-API-Key": "jobboerse-jobsuche",
+    "User-Agent": "Jobsuche/2.9.2 (de.arbeitsagentur.jobboerse; build:1077; iOS 15.1.0) Alamofire/5.4.4",
+    "Accept": "application/json",
+}
 BA_DETAIL = "https://www.arbeitsagentur.de/jobsuche/jobdetail/{}"
 
 HEUTE = datetime.now(timezone.utc).date()
@@ -40,8 +45,13 @@ HEUTE = datetime.now(timezone.utc).date()
 # Quellen
 # ----------------------------------------------------------------------------
 
+PROTOKOLL = {"anfragen": 0, "erfolgreich": 0, "fehler": {}}
+_funktionierende_url = None
+
+
 def ba_suche(begriff, region, befristung, tage):
     """Eine Suche bei der Arbeitsagentur. befristung: 1 = befristet, 2 = unbefristet."""
+    global _funktionierende_url
     params = {
         "was": begriff,
         "wo": region["ort"],
@@ -53,14 +63,28 @@ def ba_suche(begriff, region, befristung, tage):
         "size": 100,
         "page": 1,
     }
-    for url in BA_URLS:
+    PROTOKOLL["anfragen"] += 1
+    urls = [_funktionierende_url] if _funktionierende_url else BA_URLS
+    for url in urls:
         try:
             antwort = requests.get(url, headers=BA_HEADER, params=params, timeout=30)
-            if antwort.status_code == 200:
-                return antwort.json().get("stellenangebote", []) or []
-        except (requests.RequestException, ValueError):
+        except requests.RequestException as e:
+            PROTOKOLL["fehler"][f"{'/'.join(url.split('/')[-3:])} Verbindung: {type(e).__name__}"] = 1
             continue
-    print(f"  Hinweis: keine Antwort für '{begriff}' in {region['ort']}", file=sys.stderr)
+        if antwort.status_code != 200:
+            schluessel = f"{'/'.join(url.split('/')[-3:])} Status {antwort.status_code}"
+            PROTOKOLL["fehler"][schluessel] = PROTOKOLL["fehler"].get(schluessel, 0) + 1
+            continue
+        try:
+            daten = antwort.json()
+        except ValueError:
+            PROTOKOLL["fehler"]["Antwort ist kein JSON"] = 1
+            continue
+        if "stellenangebote" not in daten and daten.get("maxErgebnisse") not in (None, "0", 0):
+            print(f"  Unerwartetes Antwortformat, Felder: {list(daten)[:10]}", file=sys.stderr)
+        _funktionierende_url = url
+        PROTOKOLL["erfolgreich"] += 1
+        return daten.get("stellenangebote") or []
     return []
 
 
@@ -73,7 +97,7 @@ def ba_stelle_umwandeln(roh, region_name, befristet):
         ort = ort[0] if ort else {}
     return {
         "id": "ba:" + refnr,
-        "titel": (roh.get("titel") or roh.get("beruf") or "").strip(),
+        "titel": (roh.get("titel") or roh.get("stellenangebotsTitel") or roh.get("beruf") or "").strip(),
         "arbeitgeber": (roh.get("arbeitgeber") or "").strip(),
         "ort": " ".join(x for x in [ort.get("plz", ""), ort.get("ort", "")] if x).strip(),
         "region": region_name,
@@ -230,11 +254,21 @@ def seite_schreiben(stellen, cfg):
 
 def main():
     cfg = yaml.safe_load(CONFIG.read_text(encoding="utf-8"))
-    stellen = [bewerten(s, cfg) for s in sammeln(cfg)]
+    roh = sammeln(cfg)
+
+    print(f"\nDiagnose: {PROTOKOLL['erfolgreich']} von {PROTOKOLL['anfragen']} Anfragen erfolgreich, "
+          f"Schnittstelle: {_funktionierende_url or 'keine'}")
+    for text, anzahl in PROTOKOLL["fehler"].items():
+        print(f"  Fehler: {text} ({anzahl}x)")
+    if PROTOKOLL["erfolgreich"] == 0 or not roh:
+        print("\nABBRUCH: Keine Stellen empfangen. Die Übersichtsseite bleibt unverändert.")
+        sys.exit(1)
+
+    stellen = [bewerten(s, cfg) for s in roh]
     stellen = mit_gedaechtnis_abgleichen(stellen, cfg.get("neu_fuer_tage", 3))
     seite_schreiben(stellen, cfg)
     sichtbar = [s for s in stellen if not s["ausgeblendet"]]
-    print(f"Fertig: {len(sichtbar)} passende Stellen, "
+    print(f"Fertig: {len(stellen)} Stellen empfangen, {len(sichtbar)} passend, "
           f"davon {sum(s['neu'] for s in sichtbar)} neu, "
           f"{len(stellen) - len(sichtbar)} ausgeblendet.")
 

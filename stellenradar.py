@@ -80,30 +80,60 @@ def ba_suche(begriff, region, befristung, tage):
         except ValueError:
             PROTOKOLL["fehler"]["Antwort ist kein JSON"] = 1
             continue
-        if "stellenangebote" not in daten and daten.get("maxErgebnisse") not in (None, "0", 0):
-            print(f"  Unerwartetes Antwortformat, Felder: {list(daten)[:10]}", file=sys.stderr)
+        liste = daten.get("stellenangebote") or daten.get("ergebnisliste") or []
+        if liste and not PROTOKOLL.get("beispiel"):
+            PROTOKOLL["beispiel"] = liste[0]
+            print(f"  Felder einer Stelle: {list(liste[0])}")
         _funktionierende_url = url
         PROTOKOLL["erfolgreich"] += 1
-        return daten.get("stellenangebote") or []
+        return liste
     return []
 
 
+def _text(wert):
+    """Holt einen Namen aus Text oder aus einem verschachtelten Feld."""
+    if isinstance(wert, dict):
+        for k in ("name", "titel", "bezeichnung", "text"):
+            if isinstance(wert.get(k), str):
+                return wert[k]
+        return ""
+    return wert if isinstance(wert, str) else ""
+
+
+def _erstes(roh, *felder):
+    for f in felder:
+        if roh.get(f):
+            return roh[f]
+    return None
+
+
 def ba_stelle_umwandeln(roh, region_name, befristet):
-    refnr = roh.get("refnr") or roh.get("referenznummer")
-    if not refnr:
+    # Manche Versionen verpacken die Stelle noch einmal
+    if len(roh) == 1 and isinstance(next(iter(roh.values())), dict):
+        roh = next(iter(roh.values()))
+    refnr = _erstes(roh, "refnr", "referenznummer")
+    kennung = refnr or _erstes(roh, "hashId", "id")
+    if not kennung:
         return None
-    ort = roh.get("arbeitsort") or {}
+    ort = _erstes(roh, "arbeitsort", "arbeitsorte") or {}
     if isinstance(ort, list):
         ort = ort[0] if ort else {}
+    if not isinstance(ort, dict):
+        ort = {"ort": str(ort)}
+    datum = str(_erstes(roh, "aktuelleVeroeffentlichungsdatum", "veroeffentlichungsdatum",
+                        "ersteVeroeffentlichungsdatum", "modifikationsTimestamp") or "")[:10]
+    link = _erstes(roh, "externeUrl", "externeURL")
+    if not link:
+        link = BA_DETAIL.format(refnr) if refnr else (
+            "https://www.arbeitsagentur.de/jobsuche/suche?was=" + requests.utils.quote(_text(_erstes(roh, "titel", "stellenangebotsTitel", "beruf"))))
     return {
-        "id": "ba:" + refnr,
-        "titel": (roh.get("titel") or roh.get("stellenangebotsTitel") or roh.get("beruf") or "").strip(),
-        "arbeitgeber": (roh.get("arbeitgeber") or "").strip(),
-        "ort": " ".join(x for x in [ort.get("plz", ""), ort.get("ort", "")] if x).strip(),
+        "id": "ba:" + str(kennung),
+        "titel": _text(_erstes(roh, "titel", "stellenangebotsTitel", "stellentitel", "beruf") or "").strip(),
+        "arbeitgeber": _text(_erstes(roh, "arbeitgeber", "arbeitgeberName", "firma") or "").strip(),
+        "ort": " ".join(str(x) for x in [ort.get("plz", ""), ort.get("ort", "")] if x).strip(),
         "region": region_name,
-        "veroeffentlicht": (roh.get("aktuelleVeroeffentlichungsdatum")
-                            or roh.get("modifikationsTimestamp", "")[:10] or ""),
-        "link": roh.get("externeUrl") or BA_DETAIL.format(refnr),
+        "veroeffentlicht": datum,
+        "link": link,
         "befristet": befristet,
         "quelle": "Arbeitsagentur",
     }

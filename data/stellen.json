@@ -17,7 +17,7 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Join our Talent Pool"
   },
-  "ka:Scalable Capital:https://jobs.smartrecruiters.com/ScalableGmbH/744000151600039": {
+  "ka:Scalable Capital:https://jobs.smartrecruiters.com/ScalableGmbH/744000151646239": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "(Senior) Talent Acquisition Manager (m/f/x)"
   },
@@ -1313,13 +1313,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Spezialist (m/w/d) Corporate Planning & Controlling (befristet für 12 Monate)"
   },
-  "ba:15794-471642_50441-1-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Head of AI Experience Center (m/f/d)"
-  },
   "ba:15794-470686_50042-1-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "(Senior) Manager Regulatory Reporting / Risk & Data Quality Management (m/w/d)"
+  },
+  "ba:15794-471642_50441-1-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Head of AI Experience Center (m/f/d)"
   },
   "ba:10001-1003241132-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1709,13 +1709,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent (m/w/d) in Teilzeit"
   },
-  "ba:10001-1002627677-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalreferent*in (m/w/d) oder Personalsachbearbeiter*in (m/w/d)"
-  },
   "ba:10001-1000156212-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent Köln m/w/d"
+  },
+  "ba:10001-1002627677-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Personalreferent*in (m/w/d) oder Personalsachbearbeiter*in (m/w/d)"
   },
   "ba:14333-20265d4mml4d-000-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1829,10 +1829,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Operations Specialist / HR Generalist (m|w|d)"
   },
-  "ba:10001-1003632955-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "HR Specialist Payroll & Administration (m/w/d)"
-  },
   "ba:10001-1003626407-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personaldisponent Vertrieb (m/w/d)"
@@ -1840,6 +1836,10 @@
   "ba:10001-1003626396-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Recruiter (m/w/d) Deutsch & Polnisch"
+  },
+  "ba:10001-1003632955-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "HR Specialist Payroll & Administration (m/w/d)"
   },
   "ba:10001-1001876506-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1993,13 +1993,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "AI Enablement & Governance Manager (m/w/d)"
   },
-  "ba:10001-1001543859-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Property Manager/Immobilienverwalter (m/w/d) in Wuppertal"
-  },
   "ba:15939-BB-634996-7878-3549-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Senior Specialist SAP Authorization Manager (m/w/d)"
+  },
+  "ba:10001-1001543859-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Property Manager/Immobilienverwalter (m/w/d) in Wuppertal"
   },
   "ba:10001-1003702959-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2185,13 +2185,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Sozialpädagogische Assistenz (SPA) (m/w/d) - Kita Wilma in Wilhelmsburg"
   },
-  "ba:10001-1003716289-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Teamleitung (m/w/d) Food"
-  },
   "ba:20294-107733X347386-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Hauswirtschaftskraft (m/w/d), Kita LohkoMotive"
+  },
+  "ba:10001-1003716289-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Teamleitung (m/w/d) Food"
   },
   "ba:10001-1003633226-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2201,7 +2201,7 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher (m/w/d) oder SPA (m/w/d), GTS Molkenbuhrstraße"
   },
-  "ba:10001-1003747099-S": {
+  "ba:10001-1002436677-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Verkäufer (M/W/D) Frischetheke Fleisch / Wurst"
   },
@@ -2625,13 +2625,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Sales Manager (m/w/d)"
   },
-  "ba:10001-1003228177-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Customer Care Agent (w/m/d) Fleet Management"
-  },
   "ba:18902-2338267-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Customer Success Manager m/w/d"
+  },
+  "ba:10001-1003228177-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Customer Care Agent (w/m/d) Fleet Management"
   },
   "ba:18902-2337412-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3781,13 +3781,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalsachbearbeiter (m/w/d) Münchner Westen - Vermittlung"
   },
-  "ba:10001-1003568472-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalsachbearbeiter - HR Allrounder (m/w/d)"
-  },
   "ba:14343-2332748-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Payroll Specialist (m/w/d)"
+  },
+  "ba:10001-1003568472-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Personalsachbearbeiter - HR Allrounder (m/w/d)"
   },
   "ba:10000-1207307343-S": {
    "zuerst_gesehen": "2026-09-24",

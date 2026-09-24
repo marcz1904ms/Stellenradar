@@ -1,82 +1,6 @@
 {
  "version": 2,
  "stellen": {
-  "ka:ABOUT YOU:https://corporate.aboutyou.de/en/privacy-policy-for-business-partners-and-suppliers": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Privacy Policy for Business Partners & Suppliers"
-  },
-  "ka:Asklepios Kliniken:https://www.asklepios.com/karriere/jobs?workareaIds=workareaIds_QXVzYmlsZHVuZw%3D%3D": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Asklepios Kliniken:https://www.asklepios.com/karriere/asklepios-als-arbeitgeber/arbeitgebervorteile/fort-und-weiterbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Fort- und Weiterbildung"
-  },
-  "ka:Asklepios Kliniken:https://www.asklepios.com/karriere/ausbildung-studium/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung bei Asklepios"
-  },
-  "ka:Aurubis:https://ausbildung.aurubis.com/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Beiersdorf:https://www.beiersdorf.de/karriere/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Beiersdorf:https://www.beiersdorf.de/karriere/berufseinstieg-und-berufserfahrene/human-resources": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Human Resources"
-  },
-  "ka:Berenberg:https://careers.berenberg.com/de/early-careers/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Berenberg:https://berenberg.avature.net/de_DE/talentpoolDE": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Talent Community"
-  },
-  "ka:EDEKA Zentrale:https://verbund.edeka/karriere/karrierem%C3%B6glichkeiten/f%C3%BCr-sch%C3%BCler/ausbildung-duales-studium/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Duales Studium"
-  },
-  "ka:EDEKA Zentrale:https://verbund.edeka/ausbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:EDEKA Zentrale:https://verbund.edeka/karriere/karrieremoeglichkeiten/fuer-mitarbeiter/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Fort- und Weiterbildung"
-  },
-  "ka:Fielmann:https://career.fielmann.com/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Funk Gruppe:https://www.funk-gruppe.de/de/karriere-bei-funk/ausbildung-und-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung und Studium"
-  },
-  "ka:Hamburg Commercial Bank:https://www.hcob-bank.com/ueber-uns/human-resources/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Human Resources"
-  },
-  "ka:Hamburger Sparkasse (Haspa):https://www.haspa.de/de/home/karriere/Schueler/Ausbildung.html?n=true&stref=hnav": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Schüler - Ausbildung"
-  },
-  "ka:Hamburger Sparkasse (Haspa):https://www.haspa.de/de/home/karriere/Schueler.html?n=true&stref=opener": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Alles rund um Ausbildung und Duales Studium"
-  },
-  "ka:Hamburger Sparkasse (Haspa):https://www.haspa.de/de/home/karriere/Studierende.html?n=true&stref=opener": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Meine Bank heißt JUNGE TALENTE im Team willkommen."
-  },
-  "ka:HanseMerkur:https://karriere.hansemerkur.de/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Starte bei uns deine Ausbildung oder dein Duales Studium"
-  },
   "ka:InnoGames:https://jobs.eu.lever.co/innogames/da6bb865-0cf5-4931-8991-55f9a06c3045": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ausbildung zum*r Fachinformatiker*in Anwendungsentwicklung in der Spieleentwicklung 2027"
@@ -85,285 +9,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ausbildung zum*r Fachinformatiker*in Systemintegration 2027"
   },
-  "ka:Jungheinrich:https://www.jungheinrich.de/karriere/ausbildung-und-duales-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Duales Studium"
-  },
-  "ka:Mankiewicz Gebr. & Co.:https://www.mankiewicz.com/de/karriere/ausbildung-und-duales-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Übersicht Ausbildung und Duales Studium"
-  },
-  "ka:Mankiewicz Gebr. & Co.:https://www.mankiewicz.com/de/karriere/weiterbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Weiterbildung"
-  },
-  "ka:OMR:https://omr.com/de/jobs-hr/articles/betriebliche-altersvorsorge-penzilla-warum-nutzt-fast-niemand-den-gesetzlichen-anspruch": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Redaktion OMR Jobs & HR | 28.5.2026 Betriebliche Altersvorsorge: Warum nutzt fast niemand den gesetzlichen Anspruch?"
-  },
-  "ka:OMR:https://omr.com/de/jobs-hr/articles/willkommen-im-recruiting-paradoxon-von-2026": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Redaktion OMR Jobs & HR | 29.4.2026 Willkommen im Recruiting-Paradoxon von 2026"
-  },
-  "ka:OMR:https://omr.com/de/jobs-hr/digitalsummit?utm_source=website&utm_medium=jobs&utm_campaign=summit26b&utm_term=Homepage": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Event Digital HR Summit 2026 Es geht in die nächste Runde! Los geht's am 29.09.2026 um 10 Uhr. Kostenlos anmelden"
-  },
-  "ka:OMR:https://education.omr.com/products/qcg-employer-branding": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Förderung für Berufstätige | Employer Branding 0,00 € E-Learning"
-  },
-  "ka:OMR:https://education.omr.com/products/omr-deep-dive-selbstmanagement": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "OMR Deep Dive | Gutes Selbstmanagement: Dein Weg zu mehr Fokus 99,00 € E-Learning"
-  },
-  "ka:OMR:https://education.omr.com/products/talent-acquisition-leitfaden": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "OMR Report | Talent Acquisition 149,00 € OMR Report"
-  },
-  "ka:Otto Group:javascript:socialLogin(21);": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Log-in für Mitarbeitende & interne Otto Group Talente"
-  },
-  "ka:Otto Group:https://www.ottogroup.com/de/karriere/login/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Log-in für externe Otto Group Talente"
-  },
-  "ka:STILL GmbH:https://www.still.de/karriere/ausbildung-duales-studium.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Duales Studium"
-  },
-  "ka:STILL GmbH:https://www.still.de/beruf-karriere/ausbildung-duales-studium/deine-ausbildung-bei-still.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Deine Ausbildung bei STILL"
-  },
-  "ka:STILL GmbH:https://www.still.de/beruf-karriere/ausbildung-duales-studium/ausbildungsangebote.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildungsangebote"
-  },
-  "ka:STILL GmbH:https://www.still.de/beruf-karriere/ausbildung-duales-studium/ausbildung-zum-mechatroniker.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung zum Mechatroniker"
-  },
-  "ka:STILL GmbH:https://www.still.de/beruf-karriere/ausbildung-duales-studium/zertifizierte-ausbildungsqualitaet.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Zertifizierte Ausbildungsqualität"
-  },
-  "ka:tesa SE:https://www.tesa.com/en/about-tesa/supplier-information/supplier-onboarding-site": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Supplier Onboarding"
-  },
-  "ka:AXA Konzern:https://www.axa.de/ausbildung-duales-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & duales Studium"
-  },
-  "ka:AXA Konzern:https://www.axa.de/onboarding": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Onboarding"
-  },
-  "ka:AXA Konzern:https://www.axa.de/kontakt-recruiting": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Kontakt Recruiting"
-  },
-  "ka:BarmeniaGothaer:https://karriere.barmeniagothaer.de/einstieg/ausbildung-duales-studium/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Duales Studium"
-  },
-  "ka:BarmeniaGothaer:https://karriere.barmeniagothaer.de/deinweginsteam/onboarding/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Onboarding"
-  },
   "ka:Carglass Deutschland:https://belron.wd3.myworkdayjobs.com/Carglass_Deutschland/job/Kln-Godorf-Hauptverwaltung/Ausbildung-zur-zum-Kauffrau--mann-im-E-Commerce--m-w-d-_JR65568-1": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ausbildung zur/zum Kauffrau/-mann im E‑Commerce (m/w/d)"
   },
-  "ka:Deutsche Telekom:https://bericht.telekom.com/hr-factbook/2025/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "HR Factbook"
-  },
-  "ka:DHL Group:https://careers.dhl.com/amer/en/emailpersonalinfo": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal Information"
-  },
-  "ka:DHL Group:https://careers.dhl.com/amer/en/c/human-resources-jobs": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Human Resources Jobs"
-  },
-  "ka:Evonik (Standort Wesseling):https://www.evonik.com/en/markets/market_1345343.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal Care & Beauty"
-  },
-  "ka:Evonik (Standort Wesseling):https://www.evonik.com/en/careers/why/onboarding.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Onboarding"
-  },
-  "ka:HARIBO:https://www.haribo.com/de-de/karriere/schueler": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:HRS Group:https://jobs.hrs.com/talentcommunity/subscribe/?locale=en_US": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Join Talent Community"
-  },
-  "ka:igus GmbH:https://karriere.igus.de/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Studium"
-  },
-  "ka:igus GmbH:https://karriere.igus.de/category/einkauf-finanzen-hr": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Einkauf, Finanzen, HR und mehr 9 offene Jobs"
-  },
-  "ka:OBI Group:https://jobs.obi.de/search?department=Ausbildung%20%26%20Studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Duales Studium"
-  },
-  "ka:Postbank / Deutsche Bank (Standort Bonn):https://careers.db.com/Schuelerinnen/deine-ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Deine Ausbildung"
-  },
-  "ka:Scopevisio:https://www.scopevisio.com/loesung/hr-management/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Human Resources Management (HRM)"
-  },
-  "ka:Scopevisio:https://www.scopevisio.com/loesung/hr-management/digitale-personalakte/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Digitale Personalakte"
-  },
-  "ka:Scopevisio:https://www.scopevisio.com/loesung/hr-management/onboarding/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Onboarding"
-  },
-  "ka:Scopevisio:https://www.scopevisio.com/loesung/hr-management/aus-und-weiterbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Aus- und Weiterbildung"
-  },
-  "ka:Scopevisio:https://www.scopevisio.com/loesung/personal/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal"
-  },
-  "ka:Ströer SE:https://karriere.stroeer.com/ausbildung-duales-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "AUSBILDUNG UND STUDIUM"
-  },
-  "ka:toom Baumarkt:https://karriere.toom.de/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:toom Baumarkt:https://karriere.toom.de/ausbildung/ausbildungsberufe": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildungsberufe"
-  },
-  "ka:TÜV Rheinland:https://www.tuv.com/jobs-und-karriere/de/nav/berufsfelder/business-administration/personal/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal"
-  },
-  "ka:TÜV Rheinland:https://www.tuv.com/jobs-und-karriere/de/nav/berufsfelder/training-weiterbildung/%C3%BCbersicht-training-weiterbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Übersicht Training & Weiterbildung"
-  },
-  "ka:TÜV Rheinland:https://www.tuv.com/jobs-und-karriere/de/nav/talentpools/talentpool-registrierung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Talentpool Registrierung"
-  },
-  "ka:Zurich Gruppe Deutschland:https://www.zurich.de/de-de/ueber-uns/karriere/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Schule und Ausbildung"
-  },
-  "ka:Allianz:https://www.allianz.com/content/dam/onemarketing/azcom/Allianz_com/school-for-life": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Start learning now"
-  },
-  "ka:Allianz:https://careers.allianz.com/global/en/jointalentcommunity": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Join our talent community"
-  },
-  "ka:CHECK24:https://jobs.check24.de/de/teams/hr/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Human Resources"
-  },
-  "ka:CHECK24:https://jobs.check24.de/de/youngtalents/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Young Talents"
-  },
-  "ka:EGYM:https://sites.google.com/egym.de/egymus/home": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "EGYM Digital Learning"
-  },
-  "ka:ERGO Group (Standort München):https://www.nextinsurance.com/industry/beauty-insurance/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Beauty & Personal Care"
-  },
-  "ka:ERGO Group (Standort München):https://www.nextinsurance.com/business-personal-property-insurance/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Business Personal Property"
-  },
-  "ka:ERGO Group (Standort München):https://www.nextinsurance.com/business/personal-trainer-insurance/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal Trainer Insurance"
-  },
-  "ka:Generali Deutschland:https://www.generali.de/karriere/schueler": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Schüler Informationen zu Ausbildungs- und Studienmöglichkeiten"
-  },
-  "ka:Hubert Burda Media:https://www.burda.com/de/karriere/onboarding-entwicklung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Onboarding & Entwicklung"
-  },
-  "ka:Hubert Burda Media:https://www.burda.com/de/karriere/burda-talentnetwork/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Burda TalentNetwork"
-  },
-  "ka:Hubert Burda Media:https://www.burda.com/de/karriere/recruiting-team/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Recruiting-Team"
-  },
-  "ka:Hubert Burda Media:https://www.burda.com/de/news/karrierenews-ausbildung-mit-perspektive/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung mit Perspektive: Warum viele Absolvent:innen bei Burda bleiben"
-  },
-  "ka:HypoVereinsbank (UniCredit):https://www.hypovereinsbank.de/hvb/ueber-uns/jobs-karriere/schueler/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:HypoVereinsbank (UniCredit):https://www.hypovereinsbank.de/hvb/ueber-uns/jobs-karriere/jobboerse/nutzung-recruiting-plattform": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "NUTZUNG DER RECRUITING PLATTFORM"
-  },
-  "ka:Infineon Technologies:https://www.infineon.com/applications/solutions/machine-learning-edge-ai": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Machine Learning Edge AI"
-  },
-  "ka:Infineon Technologies:https://www.infineon.com/design-resources/development-tools/sdk/modustoolbox-software/modustoolbox-machine-learning": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "ModusToolbox™ for Machine Learning"
-  },
   "ka:KONUX:https://job-boards.greenhouse.io/konux/jobs/4109616003": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Join our Talent Pool"
-  },
-  "ka:Linde:https://www.linde.com/about-us/our-people/talent-inclusion-and-engagement": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Talent, Inclusion & Engagement"
-  },
-  "ka:MAN Truck & Bus:https://www.man.eu/corporate/en/man-hr-services-gmbh.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "MAN HR Services"
-  },
-  "ka:MediaMarktSaturn:https://www.ceconomy-mms.com/de/article/young-talents-bei-uns-dein-einstieg-dein-weg": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Young Talents bei uns Dein Einstieg. Dein Weg."
-  },
-  "ka:MTU Aero Engines:https://www.mtu.de/de/karriere/schueler/virtueller-rundgang-durch-die-ausbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Virtueller Rundgang durch die Ausbildung"
-  },
-  "ka:Roche Diagnostics (Standort Penzberg):https://www.roche.de/innovation/personalisierte-medizin/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalisierte Medizin"
-  },
-  "ka:Rohde & Schwarz:https://www.rohde-schwarz.com/us/about-us/cookies_230348.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Do not sell my personal information"
   },
   "ka:Scalable Capital:https://jobs.smartrecruiters.com/ScalableGmbH/744000151600039": {
    "zuerst_gesehen": "2026-09-24",
@@ -377,137 +29,9 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Working Student People & Culture (m/f/x)"
   },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/referate/personal-und-personalentwicklung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal und Personalentwicklung"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-it-gmbh/ausbildung-in-der-it": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung in der IT"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-personal-service-gmbh": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Alexianer Personal Service GmbH"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-service-gmbh/personal-alexianer-service-gmbh": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personal"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-service-gmbh/personal-alexianer-service-gmbh/leistungsspektrum/personalbetreuung-und-abrechnung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalbetreuung und -abrechnung"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-service-gmbh/personal-alexianer-service-gmbh/leistungsspektrum/arbeitsorganisation-und-personalcontrolling": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Arbeitsorganisation und Personalcontrolling"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-service-gmbh/personal-alexianer-service-gmbh/leistungsspektrum/personalmarketing-und-recruiting": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalmarketing und Recruiting"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/gruppe/dienstleister/alexianer-service-gmbh/personal-alexianer-service-gmbh/leistungsspektrum/ausbildungsbetreuung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildungsbetreuung"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/karriere/ausbildung-und-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung und Studium"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/karriere/ausbildung-und-studium/alexianer-care-talents": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Alexianer Care Talents"
-  },
-  "ka:Alexianer GmbH:https://www.alexianer.de/karriere/ausbildung-und-studium/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Apetito:https://www.apetito.de/kontakt/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Apetito:https://www.apetito.de/jobs/ausbildung-praktikum": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildungen und Praktika entdecken!"
-  },
-  "ka:Atruvia AG:https://karriere.atruvia.de/ausbildung/?utm_source=Atruvia.de&utm_medium=Navigation&utm_campaign=Homepage": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung, Duales Studium und Praktikum für Schüler*innen"
-  },
-  "ka:Atruvia AG:https://karriere.atruvia.de/ausbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung, Duales Studium, Praktikum für Schüler*innen"
-  },
-  "ka:Brillux:https://www.brillux.de/reference/39883e14-6565-456a-a0c7-a3a790dd9a70?locale=de_DE": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Weiterbildung"
-  },
-  "ka:DZ HYP:https://dzhyp.de/de/karriere/ausbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Felix Schoeller Group:https://karriere.felix-schoeller.com/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Felix Schoeller Group:https://karriere.felix-schoeller.com/ausbildung/ausbildungsberufe": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildungsberufe"
-  },
-  "ka:Felix Schoeller Group:https://karriere.felix-schoeller.com/entdecke-uns/personalentwicklung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalentwicklung"
-  },
-  "ka:FIEGE Logistik:https://karriere.fiege.com/karrierelevel/ausbildung-duales-studium": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & duales Studium"
-  },
-  "ka:GGM Gastro International:https://career.ggmgastro.com/de/jobs/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Haver & Boecker:https://www.haverboecker.com/de/unternehmen/academy/unsere-leistungen/ausbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:Haver & Boecker:https://www.haverboecker.com/de/unternehmen/academy/unsere-leistungen/weiterbildung/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Weiterbildung"
-  },
-  "ka:Haver & Boecker:https://www.haverboecker.com/de/unternehmen/karriere/einstiegsmoeglichkeiten/fuer-schuelerinnnen-und-schueler/ausbildungsberufe/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildungsberufe"
-  },
-  "ka:Hengst SE:https://www.hengst.com/de/karriere/ihr-einstieg-bei-uns/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung & Schülerpraktika"
-  },
-  "ka:KME Germany:https://www.kme.com/de/karriere/osnabrueck/ausbildung-2025": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:LVM Versicherung:https://karriere.lvm.de/in-den-agenturen/agentur-ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung in Agenturen"
-  },
-  "ka:St. Franziskus-Stiftung Münster:https://karriere.st-franziskus-stiftung.de/ausbildung": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung"
-  },
-  "ka:St. Franziskus-Stiftung Münster:https://karriere.st-franziskus-stiftung.de/wp-content/uploads/2025/12/Bildungskatalog-SFS-2026-002.pdf": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Fort- und Weiterbildungskatalog zum Download"
-  },
-  "ka:St. Franziskus-Stiftung Münster:https://karriere.st-franziskus-stiftung.de/international-recruiting/": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "International Recruiting"
-  },
   "ka:Web Computing GmbH:https://web-computing.de/stellen/werkstudent-im-recruiting-bewerbermanagement": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Werkstudent im Recruiting / Bewerbermanagement People & Culture Werkstudent:In Münster"
-  },
-  "ka:Windhoff:https://www.windhoff.de/karriere/ausbildung-bei-windhoff.html": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Ausbildung Deine Ausbildung bei WINDHOFF!"
   },
   "ba:10001-1003428283-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2185,13 +1709,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent (m/w/d) in Teilzeit"
   },
-  "ba:10001-1000156212-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalreferent Köln m/w/d"
-  },
   "ba:10001-1002627677-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent*in (m/w/d) oder Personalsachbearbeiter*in (m/w/d)"
+  },
+  "ba:10001-1000156212-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Personalreferent Köln m/w/d"
   },
   "ba:14333-20265d4mml4d-000-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2305,6 +1829,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Operations Specialist / HR Generalist (m|w|d)"
   },
+  "ba:10001-1003632955-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "HR Specialist Payroll & Administration (m/w/d)"
+  },
   "ba:10001-1003626407-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personaldisponent Vertrieb (m/w/d)"
@@ -2312,10 +1840,6 @@
   "ba:10001-1003626396-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Recruiter (m/w/d) Deutsch & Polnisch"
-  },
-  "ba:10001-1003632955-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "HR Specialist Payroll & Administration (m/w/d)"
   },
   "ba:10001-1001876506-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2469,13 +1993,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "AI Enablement & Governance Manager (m/w/d)"
   },
-  "ba:15939-BB-634996-7878-3549-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Senior Specialist SAP Authorization Manager (m/w/d)"
-  },
   "ba:10001-1001543859-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Property Manager/Immobilienverwalter (m/w/d) in Wuppertal"
+  },
+  "ba:15939-BB-634996-7878-3549-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Senior Specialist SAP Authorization Manager (m/w/d)"
   },
   "ba:10001-1003702959-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -4257,13 +3781,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalsachbearbeiter (m/w/d) Münchner Westen - Vermittlung"
   },
-  "ba:14343-2332748-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Payroll Specialist (m/w/d)"
-  },
   "ba:10001-1003568472-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalsachbearbeiter - HR Allrounder (m/w/d)"
+  },
+  "ba:14343-2332748-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Payroll Specialist (m/w/d)"
   },
   "ba:10000-1207307343-S": {
    "zuerst_gesehen": "2026-09-24",

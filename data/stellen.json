@@ -33,13 +33,13 @@
    "zuerst_gesehen": "2026-10-14",
    "titel": "Spezialist Personalentwicklung (m/w/d)"
   },
-  "ba:12608-1459584-28452-1-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Experte Eignungsdiagnostik & Personalentwicklung (m/w/d)"
-  },
   "ba:10001-1003428283-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Trainer Personalentwicklung (m/w/d) mit Schwerpunkt Führungskräfte- und Vertriebs-Entwicklung"
+  },
+  "ba:12608-1459584-28452-1-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Experte Eignungsdiagnostik & Personalentwicklung (m/w/d)"
   },
   "ba:18402-k60486.1267-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -48,10 +48,6 @@
   "ba:10001-1003655227-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent (m/w/d) mit dem Schwerpunkt Personalentwicklung und Ausbildung"
-  },
-  "ba:10000-1207963197-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Gärtner\\*in"
   },
   "ba:10001-1002672972-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -81,14 +77,6 @@
    "zuerst_gesehen": "2026-10-14",
    "titel": "Personalreferent HR Administration (m/w/d)"
   },
-  "ba:10000-1208213341-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Bauingenieur*in als Sachgebietsleitung (w/m/d)"
-  },
-  "ba:10001-1003833036-S": {
-   "zuerst_gesehen": "2026-10-10",
-   "titel": "Personalleitung (m/w/d)"
-  },
   "ba:10000-1208099364-S": {
    "zuerst_gesehen": "2026-10-01",
    "titel": "EXAMINIERTE PFLEGEFACHKRAFT (M/W/D) für die Sozialstation Lüdinghausen"
@@ -97,6 +85,10 @@
    "zuerst_gesehen": "2026-10-01",
    "titel": "EXAMINIERTE PFLEGEFACHKRAFT (M/W/D) mit Qualifikation in der Pflegeberatung"
   },
+  "ba:10001-1003833036-S": {
+   "zuerst_gesehen": "2026-10-10",
+   "titel": "Personalleitung (m/w/d)"
+  },
   "ba:10001-1003834811-S": {
    "zuerst_gesehen": "2026-10-10",
    "titel": "Straßenwärter*in"
@@ -104,6 +96,10 @@
   "ba:15693-44355460-85-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Trainer (m/w/d) mit Schwerpunkt (Leadership-)Diagnostik"
+  },
+  "ba:10000-1208213341-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Bauingenieur*in als Sachgebietsleitung (w/m/d)"
   },
   "ba:13270-P00588222-1-S": {
    "zuerst_gesehen": "2026-10-03",
@@ -116,10 +112,6 @@
   "ba:12608-1459585-28452-1-S": {
    "zuerst_gesehen": "2026-10-13",
    "titel": "Experte Learning & Development (m/w/d)"
-  },
-  "ba:10000-1208237590-S": {
-   "zuerst_gesehen": "2026-10-10",
-   "titel": "Stadtplaner:in in der Bauleitplanung (m/w/d)"
   },
   "ba:10000-1208212380-S": {
    "zuerst_gesehen": "2026-10-09",
@@ -305,10 +297,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Referenten Firmenkunden (w/m/d) in Münster"
   },
-  "ba:10001-1003729583-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Referent (m/w/d) Vertriebssteuerung - Provisionsmanagement"
-  },
   "ba:16852-44435750-910-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Executive Assistant to the CTO and the Value Creation & Delivery Office (m/f/d)"
@@ -437,6 +425,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent (m/w/d) Professional (in Lünen, Vollzeit, unbefristet)"
   },
+  "ba:12288-4970254713-S": {
+   "zuerst_gesehen": "2026-10-19",
+   "titel": "Personalreferent Recruiting (m/w/d) / Talent Acquisition Specialist"
+  },
   "ba:12288-4961421525-S": {
    "zuerst_gesehen": "2026-10-15",
    "titel": "Personaladministration Recruiting (m/w/d)"
@@ -505,10 +497,6 @@
    "zuerst_gesehen": "2026-10-08",
    "titel": "Business Process Manager After Sales (m/w/d)"
   },
-  "ba:12288-4963186536-S": {
-   "zuerst_gesehen": "2026-10-13",
-   "titel": "Senior Manager Operational Excellence & Transformation (m/w/d)"
-  },
   "ba:10001-1000280465-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "JUNIOR MANAGER NRW (m/w/d)"
@@ -536,10 +524,6 @@
   "ba:19228-0000920352a001-S": {
    "zuerst_gesehen": "2026-10-03",
    "titel": "Global Compensation & Benefits Manager (m/w/d)"
-  },
-  "ba:13660-971638988-S": {
-   "zuerst_gesehen": "2026-10-03",
-   "titel": "(Senior) Manager Accounting Center of Expertise (m/w/d)"
   },
   "ba:15590-1V19ZKS6O6RWNOEB-S": {
    "zuerst_gesehen": "2026-10-03",
@@ -589,13 +573,13 @@
    "zuerst_gesehen": "2026-10-09",
    "titel": "Teamleiter Finanzbuchhaltung (m|w|d)"
   },
-  "ba:18306-BB-635630-7878-9275-S": {
-   "zuerst_gesehen": "2026-10-17",
-   "titel": "(Senior) Spezialist Learning & Development"
-  },
   "ba:10001-1001468813-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Schichtleiter (m/w/d) für die chemische Grundstoffindustrie (Betreiber)"
+  },
+  "ba:18306-BB-635630-7878-9275-S": {
+   "zuerst_gesehen": "2026-10-17",
+   "titel": "(Senior) Spezialist Learning & Development"
   },
   "ba:10001-1003755444-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -641,13 +625,13 @@
    "zuerst_gesehen": "2026-10-10",
    "titel": "Erzieher / Kindheitspädagoge / Heilpädagoge (m/w/d) im Kindergarten Hohenlind"
   },
-  "ba:10001-1003731322-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Erzieher / Kindheitspädagoge (m/w/d) im Fröbel-Kindergarten KRÄHENNEST"
-  },
   "ba:10001-1003651134-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Abteilungsleitung Technische Ausrüstung (w/m/d)"
+  },
+  "ba:10001-1003731322-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Erzieher / Kindheitspädagoge (m/w/d) im Fröbel-Kindergarten KRÄHENNEST"
   },
   "ba:10001-1003836150-S": {
    "zuerst_gesehen": "2026-10-10",
@@ -677,10 +661,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagoge (m/w/d) für den U3-Bereich im Kindergarten Karlheinz"
   },
-  "ba:10001-1003841925-S": {
-   "zuerst_gesehen": "2026-10-13",
-   "titel": "Technische Leitung (m/w/d) - Wesseling"
-  },
   "ba:10001-1003554971-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagoge als Schwimmbegleiter (m/w/d) für unsere Kindergärten im Bereich West"
@@ -689,21 +669,21 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagogen (m/w/d) für unsere Kindergärten und Familienzentren in Köln"
   },
-  "ba:13270-P00590068-1-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Fachärztin/Facharzt für Rechtsmedizin am Zentrum Luft- und Raumfahrtmedizin der Luftwaffe (m/w/d)"
+  "ba:10001-1003841925-S": {
+   "zuerst_gesehen": "2026-10-13",
+   "titel": "Technische Leitung (m/w/d) - Wesseling"
   },
   "ba:10001-1001560310-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagoge (m/w/d) im Kindergarten und Familienzentrum Jecke Pänz"
   },
+  "ba:13270-P00590068-1-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Fachärztin/Facharzt für Rechtsmedizin am Zentrum Luft- und Raumfahrtmedizin der Luftwaffe (m/w/d)"
+  },
   "ba:10001-1003562080-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Stellvertretende Kita-Leitung / Koordinator für Netzwerkarbeit (m/w/d) im Kindergarten Regenbogen"
-  },
-  "ba:15699-773583-9-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Assistenzärzte für die Weiterbildung zum Facharzt / zur Fachärztin für Psychiatrie und..."
   },
   "ba:16898-3585-1764290-0-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -717,17 +697,13 @@
    "zuerst_gesehen": "2026-10-08",
    "titel": "Abteilungsleitung Verkehrs- und Straßenbauplanung (m/w/d)"
   },
+  "ba:15699-773583-9-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Assistenzärzte für die Weiterbildung zum Facharzt / zur Fachärztin für Psychiatrie und..."
+  },
   "ba:12706-44480480-102-S": {
    "zuerst_gesehen": "2026-10-03",
    "titel": "HR Business Partner (m/w/d)"
-  },
-  "ba:15235-k43552.241116-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Einrichtungsleitung (m/w/d) stationär im Familienunternehmen"
-  },
-  "ba:10001-1003855015-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Bilanzbuchhalter (m/w/d)"
   },
   "ba:10001-1003689515-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -737,6 +713,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagoge (m/w/d) im Fröbel-Kindergarten Flinke Forscher"
   },
+  "ba:15235-k43552.241116-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Einrichtungsleitung (m/w/d) stationär im Familienunternehmen"
+  },
   "ba:10001-1003692693-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Heilpädagog*in oder Psycholog*in (m/w/d) als Leitung für Interdisziplinäre Frühförderung"
@@ -745,21 +725,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagoge (m/w/d) im Fröbel-Kindergarten & Familienzentrum Zuckerhut"
   },
-  "ba:15699-1594805-5-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Ergotherapeut*in (m/w/d)"
-  },
-  "ba:15699-1643902-1-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Pflegefachperson (m/w/d) für die Rehabilitationsstation / Forensische Nachsorgeambulanz"
+  "ba:10001-1003855015-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Bilanzbuchhalter (m/w/d)"
   },
   "ba:13424-HFPGYJ9IO0NDXWT8-S": {
    "zuerst_gesehen": "2026-10-04",
    "titel": "Personalreferent (m/w/d) in Teilzeit"
-  },
-  "ba:10001-1003825802-S": {
-   "zuerst_gesehen": "2026-10-09",
-   "titel": "Facharzt m/w/d für Laboratoriumsmedizin"
   },
   "ba:19033-00006800921002-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -769,9 +741,17 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ergotherapeut (m/w/d) im Fröbel-Kindergarten & Familienzentrum Zuckerhut"
   },
-  "ba:15699-1498179-4-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Bewegungstherapeutin / Bewegungstherapeut (m/w/d)"
+  "ba:10001-1003825802-S": {
+   "zuerst_gesehen": "2026-10-09",
+   "titel": "Facharzt m/w/d für Laboratoriumsmedizin"
+  },
+  "ba:15699-1594805-5-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Ergotherapeut*in (m/w/d)"
+  },
+  "ba:15699-1643902-1-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Pflegefachperson (m/w/d) für die Rehabilitationsstation / Forensische Nachsorgeambulanz"
   },
   "ba:10001-1003562102-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -781,6 +761,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Junior Personalentwickler (m/w/d/k.A) - Schwerpunkt Ausbildung"
   },
+  "ba:15699-1498179-4-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Bewegungstherapeutin / Bewegungstherapeut (m/w/d)"
+  },
   "ba:10001-1003598190-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "WAE-K16 - Anlagenmechaniker der Abwassertechnik / Industriemechaniker (m/w/d)"
@@ -789,29 +773,29 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ausbildungskoordinator (m/w/d/k.A)"
   },
-  "ba:10001-1003788267-S": {
-   "zuerst_gesehen": "2026-10-02",
-   "titel": "Business Development Manager (m/w/d)"
-  },
   "ba:10001-1003015977-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "WAE-I - Projektleiter Entwässerung (m/w/d)"
   },
-  "ba:12633-4309f2df_JB5263446-S": {
-   "zuerst_gesehen": "2026-10-06",
-   "titel": "Kreditspezialist Sanierung (m/w/d)"
+  "ba:10001-1003788267-S": {
+   "zuerst_gesehen": "2026-10-02",
+   "titel": "Business Development Manager (m/w/d)"
   },
   "ba:13319-895336/1_623844LS-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Administrator (m/w/d)"
   },
-  "ba:10001-1003788256-S": {
-   "zuerst_gesehen": "2026-10-02",
-   "titel": "Zoll- und Exportbeauftragter (m/w/d) - Voll- oder Teilzeit"
+  "ba:12633-4309f2df_JB5263446-S": {
+   "zuerst_gesehen": "2026-10-06",
+   "titel": "Kreditspezialist Sanierung (m/w/d)"
   },
   "ba:10001-1003015792-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "FWN-E - Elektroingenieur/in (m/w/d) für das Fernwärmenetz"
+  },
+  "ba:10001-1003788256-S": {
+   "zuerst_gesehen": "2026-10-02",
+   "titel": "Zoll- und Exportbeauftragter (m/w/d) - Voll- oder Teilzeit"
   },
   "ba:13270-P00588025-1-S": {
    "zuerst_gesehen": "2026-10-06",
@@ -861,25 +845,25 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent (m/w/d)"
   },
+  "ba:10001-1003750976-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Glas- und Gebäudereiniger (m/w/d) in der Funktion der Objektleitung"
+  },
   "ba:10001-1003805388-S": {
    "zuerst_gesehen": "2026-10-07",
    "titel": "Regionalleitung Kitas (m/w/d)"
-  },
-  "ba:15699-1531960-4-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Medizinische Fachangestellte / Medizinischer Fachangestellter (m/w/d)"
   },
   "ba:10000-1208235283-S": {
    "zuerst_gesehen": "2026-10-10",
    "titel": "Abteilungsleitung (m/w/d) im Tandem"
   },
-  "ba:10001-1003750976-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Glas- und Gebäudereiniger (m/w/d) in der Funktion der Objektleitung"
-  },
   "ba:10001-1003804855-S": {
    "zuerst_gesehen": "2026-10-06",
    "titel": "Leitung Fort- und Weiterbildung für Sozial- und Gesundheitsberufe (m/w/d)"
+  },
+  "ba:15699-1531960-4-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Medizinische Fachangestellte / Medizinischer Fachangestellter (m/w/d)"
   },
   "ba:10001-1003667124-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -901,14 +885,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher / Kindheitspädagoge (m/w/d) im Fröbel-Kindergarten Lehmpöhle"
   },
-  "ba:10000-1208199703-S": {
-   "zuerst_gesehen": "2026-10-09",
-   "titel": "Volkswirtin bzw. Volkswirt (w/m/d)"
-  },
-  "ba:15643-01-ZobzI2-S": {
-   "zuerst_gesehen": "2026-10-07",
-   "titel": "Sachbearbeiter/in (w/m/d) im Dezernat ZA 2, Sachgebiet ZA 2.2 „Personalverwaltung Beamte / dienstrec"
-  },
   "ba:10000-1192519012-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Management Assistent (m/w/d)"
@@ -925,17 +901,25 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "KFZ-Meister (m/w/d)"
   },
+  "ba:10000-1208199703-S": {
+   "zuerst_gesehen": "2026-10-09",
+   "titel": "Volkswirtin bzw. Volkswirt (w/m/d)"
+  },
+  "ba:15643-01-ZobzI2-S": {
+   "zuerst_gesehen": "2026-10-07",
+   "titel": "Sachbearbeiter/in (w/m/d) im Dezernat ZA 2, Sachgebiet ZA 2.2 „Personalverwaltung Beamte / dienstrec"
+  },
   "ba:10001-1003632094-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Finanzbuchhalter (m/w/d) Schwerpunkt Anlagenbuchhaltung"
   },
-  "ba:10001-1003705446-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Weiterbildungsbefugter Psychologe (m/w/d)"
-  },
   "ba:10000-1205739159-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Feuerwehrbeamter/‑beamtin (m/w/d) mit Notfallsanitäter/‑in"
+  },
+  "ba:10000-1205739013-S": {
+   "zuerst_gesehen": "2026-10-19",
+   "titel": "Notfallsanitäter/in (m/w/d)"
   },
   "ba:10001-1003555042-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1209,6 +1193,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "People & Office Management m/w/d (Teilzeit · ab 20 Std./Woche)"
   },
+  "ba:10001-1003759156-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Senior Consultant* / Projektleiter* - Change Management Consulting"
+  },
   "ba:10001-1003612279-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Manager Sales and Development (all gender) Telekommunikation – Köln"
@@ -1216,10 +1204,6 @@
   "ba:10001-1003612325-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Manager Sales and Development (all gender) – Infrastruktur"
-  },
-  "ba:10001-1003759156-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Senior Consultant* / Projektleiter* - Change Management Consulting"
   },
   "ba:13348-1641190-1-S": {
    "zuerst_gesehen": "2026-10-14",
@@ -1233,6 +1217,10 @@
    "zuerst_gesehen": "2026-09-26",
    "titel": "Werkstudent Recruiting (m/w/d)"
   },
+  "ba:10001-1002213086-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Senior Consultant / Projektleitung - Change Management Consulting (m/w/d)"
+  },
   "ba:10001-1003824473-S": {
    "zuerst_gesehen": "2026-10-09",
    "titel": "Footwear Development Manager (m/f/d)"
@@ -1240,10 +1228,6 @@
   "ba:10001-1003824450-S": {
    "zuerst_gesehen": "2026-10-09",
    "titel": "Quality & Data Analytics Engineer (m/f/d)"
-  },
-  "ba:10001-1002213086-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Senior Consultant / Projektleitung - Change Management Consulting (m/w/d)"
   },
   "ba:16852-44420224-917-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1293,6 +1277,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Specialist Post Merger Integration (m/w/d)"
   },
+  "ba:16852-44420208-922-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Project Lead Strategy Consulting (m/f/d)"
+  },
   "ba:14340-490778480-S": {
    "zuerst_gesehen": "2026-10-16",
    "titel": "Manager of Insurance Tax, Regulation & Compliance Germany (m/f/d)"
@@ -1300,10 +1288,6 @@
   "ba:15794-471698_50495-1-S": {
    "zuerst_gesehen": "2026-10-14",
    "titel": "Media Tech Manager (m/w/d)"
-  },
-  "ba:16852-44420208-922-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Project Lead Strategy Consulting (m/f/d)"
   },
   "ba:16852-44420216-917-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1517,13 +1501,13 @@
    "zuerst_gesehen": "2026-10-14",
    "titel": "Team Leader Customer Operations"
   },
-  "ba:17952-MUW5D7BW6GJZ9LRS-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Office Manager (m/f/d)"
-  },
   "ba:10000-1206807863-S": {
    "zuerst_gesehen": "2026-10-14",
    "titel": "Kundenbetreuer (m/w/d) im Innen- und Außendienst gesucht"
+  },
+  "ba:17952-MUW5D7BW6GJZ9LRS-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Office Manager (m/f/d)"
   },
   "ba:13718-455282870-S": {
    "zuerst_gesehen": "2026-10-14",
@@ -1565,6 +1549,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Maschinenbediener / Anlagenführer (m/w/d\\*) Tape"
   },
+  "ba:12288-4970269572-S": {
+   "zuerst_gesehen": "2026-10-19",
+   "titel": "Personalreferent (m/w/d)"
+  },
   "ba:12288-4967392714-S": {
    "zuerst_gesehen": "2026-10-16",
    "titel": "Personalreferent/in (m/w/d)"
@@ -1579,10 +1567,6 @@
   },
   "ba:12862-249348-S": {
    "zuerst_gesehen": "2026-10-01",
-   "titel": "Personalreferent (m/w/d)"
-  },
-  "ba:12633-4d9a1b83_JB5217629-S": {
-   "zuerst_gesehen": "2026-10-07",
    "titel": "Personalreferent (m/w/d)"
   },
   "ba:14751-428A286-S": {
@@ -1641,13 +1625,17 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalsachbearbeiter (m/w/d)"
   },
+  "ba:14751-428A285-S": {
+   "zuerst_gesehen": "2026-10-02",
+   "titel": "HR Partner / HR Manager (m/w/d) Gummersbach"
+  },
   "ba:21084-k63249.1057-S": {
    "zuerst_gesehen": "2026-10-16",
    "titel": "Lohn- und Finanzbuchhalter (m/w/d) – Köln"
   },
-  "ba:14751-428A285-S": {
-   "zuerst_gesehen": "2026-10-02",
-   "titel": "HR Partner / HR Manager (m/w/d) Gummersbach"
+  "ba:10001-1003506014-S": {
+   "zuerst_gesehen": "2026-10-19",
+   "titel": "Senior Sachbearbeiter:in Personalmanagement (m/w/d) – VZ/TZ Schwerpunkt: Entgeltabrechnung"
   },
   "ba:10001-1003805793-S": {
    "zuerst_gesehen": "2026-10-07",
@@ -1660,10 +1648,6 @@
   "ba:16898-3699-1764222-0-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Recruiter*in - Schwerpunkt Pflege (all genders)"
-  },
-  "ba:15699-1636737-1-S": {
-   "zuerst_gesehen": "2026-09-26",
-   "titel": "Personalmanager / Personalmanagerin für Tarif- und Arbeitsrecht"
   },
   "ba:10001-1003835843-S": {
    "zuerst_gesehen": "2026-10-10",
@@ -1713,6 +1697,10 @@
    "zuerst_gesehen": "2026-10-02",
    "titel": "Personalsachbearbeiter (m/w/d) in 53227 Bonn"
   },
+  "ba:20778-2344576-S": {
+   "zuerst_gesehen": "2026-09-27",
+   "titel": "(Senior) AI Operations Engineer (m/w/d)"
+  },
   "ba:10001-1003832321-S": {
    "zuerst_gesehen": "2026-10-10",
    "titel": "Personaldisponent Vertrieb (m/w/d)"
@@ -1720,10 +1708,6 @@
   "ba:10001-1003832354-S": {
    "zuerst_gesehen": "2026-10-10",
    "titel": "Recruiter (m/w/d) Deutsch & Polnisch"
-  },
-  "ba:20778-2344576-S": {
-   "zuerst_gesehen": "2026-09-27",
-   "titel": "(Senior) AI Operations Engineer (m/w/d)"
   },
   "ba:10001-1003632955-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1793,10 +1777,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalberater / HR Manager oder Führungskraft (m/w/d)"
   },
-  "ba:10001-1003730952-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "HR Manager (m/w/d) – Aufbau einer HR-Abteilung"
-  },
   "ba:14340-489755565-S": {
    "zuerst_gesehen": "2026-10-13",
    "titel": "Senior HR Manager Labor Relations (m/w/d)"
@@ -1865,13 +1845,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Junior Tax Manager / Steuerberater (m/w/x) Hilden"
   },
-  "ba:10001-1003702959-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Junior Tax Manager / Steuerberater (m/w/x) Düsseldorf"
-  },
   "ba:17311-44439605-913-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "SAP S/4HANA Program Manager (w/m/d)"
+  },
+  "ba:10001-1003702959-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Junior Tax Manager / Steuerberater (m/w/x) Düsseldorf"
   },
   "ba:10001-1002296151-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1949,13 +1929,13 @@
    "zuerst_gesehen": "2026-10-06",
    "titel": "Ingenieur:in für Wasserbau und Gewässer"
   },
-  "ba:10001-1003858407-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Branch & AOG Desk Manager (m/w/d)"
-  },
   "ba:20294-108433X352013-S": {
    "zuerst_gesehen": "2026-10-06",
    "titel": "Erzieher (m/w/d) oder SPA (m/w/d), GTS Wolfgang- Borchert- Schule"
+  },
+  "ba:10001-1003858407-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Branch & AOG Desk Manager (m/w/d)"
   },
   "ba:10001-1003670609-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -1977,14 +1957,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Senior Trainer:in Führungskräfteentwicklung"
   },
-  "ba:20456-2355840-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Abteilungsleitung Ausbildung (w/m/d)"
-  },
-  "ba:20294-108629X353307-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Sozialpädagoge (m/w/d), Bereich ambulante Hilfen"
-  },
   "ba:10001-1000726558-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Verkaufsberater/in - Region NORD"
@@ -1993,21 +1965,29 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Berufskraftfahrer für die Werkslogistik (m/w/d) in Hamburg/Veddel"
   },
-  "ba:10001-1003803159-S": {
-   "zuerst_gesehen": "2026-10-06",
-   "titel": "Informatikerin / Informatiker (m/w/d) als Datenbank und Linux Administratorin / Administrator (m/w/d"
+  "ba:20456-2355840-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Abteilungsleitung Ausbildung (w/m/d)"
   },
-  "ba:10001-1003737232-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Kitaleitung (m/w/d)"
+  "ba:20294-108629X353307-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Sozialpädagoge (m/w/d), Bereich ambulante Hilfen"
   },
   "ba:10001-1003164407-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Heilerziehungspfleger (m/w/d) oder Heilpädagoge (m/w/d) in Teil- oder Vollzeit"
   },
+  "ba:10001-1003737232-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Kitaleitung (m/w/d)"
+  },
   "ba:10001-1003596840-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Abrufkräfte, studentische Aushilfen, Minijobber *innen (m/w/d) Eingliederungshilfe"
+  },
+  "ba:10001-1003803159-S": {
+   "zuerst_gesehen": "2026-10-06",
+   "titel": "Informatikerin / Informatiker (m/w/d) als Datenbank und Linux Administratorin / Administrator (m/w/d"
   },
   "ba:10000-1198940639-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2041,10 +2021,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Erzieher (m/w/d) , Abenteuerspielplatz Linse"
   },
-  "ba:20294-108495X352246-S": {
-   "zuerst_gesehen": "2026-10-08",
-   "titel": "Erzieher_In /SPA (m/w/d), GBS-Standort, Hamburg-Schnelsen"
-  },
   "ba:20456-2333753-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Stellvertretende Stationsleitung  (w/m/d) Chirurgie"
@@ -2053,13 +2029,17 @@
    "zuerst_gesehen": "2026-10-06",
    "titel": "Trocknungstechniker (m/w/d) im Raum Hamburg / Norddeutschland in Hamburg"
   },
-  "ba:15235-k43552.239693-S": {
-   "zuerst_gesehen": "2026-10-09",
-   "titel": "Pflegedienstleitung für einen vollstationären Pflegeplatz (m/w/d)"
+  "ba:20294-108495X352246-S": {
+   "zuerst_gesehen": "2026-10-08",
+   "titel": "Erzieher_In /SPA (m/w/d), GBS-Standort, Hamburg-Schnelsen"
   },
   "ba:10001-1003613455-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Baufachmann (m/w/d)"
+  },
+  "ba:15235-k43552.239693-S": {
+   "zuerst_gesehen": "2026-10-09",
+   "titel": "Pflegedienstleitung für einen vollstationären Pflegeplatz (m/w/d)"
   },
   "ba:20294-108031X348968-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2077,13 +2057,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Führungskräfteentwicklungsprogramm für die Projektleitung (m/w/d)"
   },
-  "ba:20294-108375X351226-S": {
-   "zuerst_gesehen": "2026-09-30",
-   "titel": "Sozialpädagoge (m/w/d), teilstationäre Wohngruppe"
-  },
   "ba:13270-P00526372-1-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Weiterbildungsassistent/-in für Neurochirurgie in Hamburg als Sanitätsoffizierin /-offizier (m/w/d)"
+  },
+  "ba:20294-108375X351226-S": {
+   "zuerst_gesehen": "2026-09-30",
+   "titel": "Sozialpädagoge (m/w/d), teilstationäre Wohngruppe"
   },
   "ba:20294-108432X351976-S": {
    "zuerst_gesehen": "2026-10-06",
@@ -2101,14 +2081,6 @@
    "zuerst_gesehen": "2026-10-06",
    "titel": "Pädagogische Hilfskraft (m/w/d) für die 1:1-Begleitung – Kita Storchenwiese in Hamburg-Neugraben"
   },
-  "ba:10001-1003854120-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Reinigungskraft (m/w/d)"
-  },
-  "ba:10001-1003801008-S": {
-   "zuerst_gesehen": "2026-10-06",
-   "titel": "HR-Generalist (m/w/d)"
-  },
   "ba:20294-104085X348041-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Logopäde (m/w/d), Therapeuten - Pool Wandsbek für Kitas"
@@ -2117,9 +2089,17 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Einrichtungsleitung (m/w/d) für stationäre Einrichtung"
   },
+  "ba:10001-1003801008-S": {
+   "zuerst_gesehen": "2026-10-06",
+   "titel": "HR-Generalist (m/w/d)"
+  },
   "ba:10001-1003761653-S": {
    "zuerst_gesehen": "2026-09-26",
    "titel": "Heilerziehungspfleger (m/w/d) oder Erzieher (m/w/d) mit heilpädagogischer Zusatzqualifikation"
+  },
+  "ba:10001-1003854120-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Reinigungskraft (m/w/d)"
   },
   "ba:20294-104086X348043-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2153,10 +2133,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ergotherapeut (m/w/d) in der Pädiatrie, DRK Zentrum-HH-Ost"
   },
-  "ba:10001-1003841390-S": {
-   "zuerst_gesehen": "2026-10-13",
-   "titel": "Hauptamtlicher Gerätewart (m/w/d) bei der Freiwilligen Feuerwehr Geesthacht"
-  },
   "ba:10001-1003465194-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Heilerziehungspfleger/ Heilpädagoge (m/w/d) - Kita Vogelhütte in Wilhelmsburg"
@@ -2169,6 +2145,10 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Ergotherapeut (m/w/d), Vollzeit oder Teilzeit, Hamburg-Allermöhe"
   },
+  "ba:10001-1003841390-S": {
+   "zuerst_gesehen": "2026-10-13",
+   "titel": "Hauptamtlicher Gerätewart (m/w/d) bei der Freiwilligen Feuerwehr Geesthacht"
+  },
   "ba:10001-1003628829-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Heilpädagoge / Heilerziehungspfleger (m/w/d) im Kindergarten Essener Straße"
@@ -2180,10 +2160,6 @@
   "ba:20294-106689X341618-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Sozialpädagoge, Erziehungswissenschaftler, Heilerzieher, Erzieher (m/w/d)"
-  },
-  "ba:10000-1208121594-S": {
-   "zuerst_gesehen": "2026-10-02",
-   "titel": "Leitung für den Fachdienst Interner Dienstbetrieb (w/m/d)"
   },
   "ba:10001-1002436931-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2233,25 +2209,25 @@
    "zuerst_gesehen": "2026-09-30",
    "titel": "Bauingenieur/in, TGA-Ingnieur/in oder Architek/in (m/w/d) als Amtsleitung für das Bauamt"
   },
-  "ba:10001-1003749422-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Fachdienstleitung (m/w/d) für den Fachdienst Bauordnung"
-  },
   "ba:10001-1002437027-S": {
    "zuerst_gesehen": "2026-10-07",
    "titel": "Fleischer / Metzger als Springer (M/W/D) Frischetheke Fleisch / Wurst"
+  },
+  "ba:10001-1003749422-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Fachdienstleitung (m/w/d) für den Fachdienst Bauordnung"
   },
   "ba:10001-1003743018-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Gebäudeenergieberater (m/w/d) für den Fachdienst Hochbau"
   },
-  "ba:10001-1003630221-S": {
-   "zuerst_gesehen": "2026-09-26",
-   "titel": "Technische Fachkraft (m/w/d) für den Abwasserbetrieb"
-  },
   "ba:10001-1002437105-S": {
    "zuerst_gesehen": "2026-10-17",
    "titel": "Leiter der Fleischabteilung (M/W/D)"
+  },
+  "ba:10001-1003630221-S": {
+   "zuerst_gesehen": "2026-09-26",
+   "titel": "Technische Fachkraft (m/w/d) für den Abwasserbetrieb"
   },
   "ba:14787-00044102bc8001-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2265,13 +2241,13 @@
    "zuerst_gesehen": "2026-10-16",
    "titel": "Wissenschaftliche/-r Mitarbeiter/-in (m/w/d) in der Professur für Medical Engineering"
   },
-  "ba:10001-1003864040-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Wissenschaftliche/-r Mitarbeiter/-in (m/w/d) in der Professur für Elektrische Messtechnik"
-  },
   "ba:10001-1003856957-S": {
    "zuerst_gesehen": "2026-10-15",
    "titel": "Wissenschaftliche/-r Mitarbeiter/-in (m/w/d) in der Professur für Informatik im Maschinenbau"
+  },
+  "ba:10001-1003864040-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Wissenschaftliche/-r Mitarbeiter/-in (m/w/d) in der Professur für Elektrische Messtechnik"
   },
   "ba:10001-1003785201-S": {
    "zuerst_gesehen": "2026-10-01",
@@ -2288,10 +2264,6 @@
   "ba:10001-1003784839-S": {
    "zuerst_gesehen": "2026-10-01",
    "titel": "Wissenschaftliche/-r Mitarbeiter/-in (m/w/d) in den Professuren für Verwaltungswissenschaften"
-  },
-  "ba:10001-1003729201-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Professur für Bürgerliches Recht, Handels-, Gesellschafts-, Wirtschafts- und Steuerrecht"
   },
   "ba:10001-1003765892-S": {
    "zuerst_gesehen": "2026-09-26",
@@ -2321,17 +2293,13 @@
    "zuerst_gesehen": "2026-10-17",
    "titel": "Pädagog:innen mit herausragenden Englischkenntnissen für bilinguale Kindertagesstätte"
   },
-  "ba:10001-1003852325-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Ergotherapist (Occupational Therapist) – Germany International Applicants Welcome"
-  },
   "ba:10001-1003730395-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Rechtsanwalt (m/w/d) - Project & Structured Finance"
   },
-  "ba:14068-k18924.2543-S": {
+  "ba:10001-1003852325-S": {
    "zuerst_gesehen": "2026-10-15",
-   "titel": "Staff Data Engineer (m/w/d)"
+   "titel": "Ergotherapist (Occupational Therapist) – Germany International Applicants Welcome"
   },
   "ba:10001-1003354271-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2340,6 +2308,10 @@
   "ba:10001-1003552696-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Rechtsanwalt (m/w/d) - Arbeitsrecht"
+  },
+  "ba:14068-k18924.2543-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Staff Data Engineer (m/w/d)"
   },
   "ba:10001-1003588618-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2357,13 +2329,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Rechtsanwalt (m/w/d) - Corporate Energy"
   },
-  "ba:11937-34855_59496-1-S": {
-   "zuerst_gesehen": "2026-10-09",
-   "titel": "(Senior) Performance Marketing Manager (m/f/d) Paid Social"
-  },
   "ba:15170-445833667-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Internal Project Manager (f/m/d) for Operational Excellence in Procurement"
+  },
+  "ba:11937-34855_59496-1-S": {
+   "zuerst_gesehen": "2026-10-09",
+   "titel": "(Senior) Performance Marketing Manager (m/f/d) Paid Social"
   },
   "ba:10001-1003167204-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2405,13 +2377,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "EHS Manager Senior (f/m/d) for GT Solutions Grid Access"
   },
-  "ba:16947-976425016-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Logistics Cost Analyst (d/f/m)"
-  },
   "ba:10001-1003639076-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Finance Manager (d/w/m)"
+  },
+  "ba:16947-976425016-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Logistics Cost Analyst (d/f/m)"
   },
   "ba:16947-975636609-S": {
    "zuerst_gesehen": "2026-10-09",
@@ -2477,10 +2449,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Senior Consultant IT Financial Management (m/w/d)"
   },
-  "ba:10001-1001350122-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "(Senior) Consultant SAP Transportation Management (m/w/d)"
-  },
   "ba:15401-k16713.5190-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Sales Manager (m/w/d)"
@@ -2489,13 +2457,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Customer Care Agent (w/m/d) Fleet Management"
   },
-  "ba:10001-1003847940-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Copy Writer:in / Content Writer:in (Medical) Marketing"
-  },
   "ba:10001-1003441284-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Head of T&O Controlling (m/f/d)"
+  },
+  "ba:10001-1003847940-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Copy Writer:in / Content Writer:in (Medical) Marketing"
   },
   "ba:18902-2337412-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2521,14 +2489,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Tender Manager (m/w/d) - Öffentlicher Dienst, Public Sector"
   },
-  "ba:10001-1003853562-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Ingenieur Sicherheitsmanagement Luftfahrt (all gender)"
-  },
-  "ba:10001-1003854512-S": {
-   "zuerst_gesehen": "2026-10-15",
-   "titel": "Project Leader – Manufacturing Engineering (all gender)"
-  },
   "ba:10001-1003728487-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Manager Sales and Development (all gender) Aviation – Hamburg"
@@ -2536,6 +2496,14 @@
   "ba:10001-1003728432-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Manager Sales and Development (all gender) Supply Chain – Hamburg"
+  },
+  "ba:10001-1003853562-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Ingenieur Sicherheitsmanagement Luftfahrt (all gender)"
+  },
+  "ba:10001-1003854512-S": {
+   "zuerst_gesehen": "2026-10-15",
+   "titel": "Project Leader – Manufacturing Engineering (all gender)"
   },
   "ba:13517-0000301b4ae001-S": {
    "zuerst_gesehen": "2026-10-10",
@@ -2569,21 +2537,21 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Manufacturing Engineering Support – TORNADO Programm (all gender)"
   },
-  "ba:13087-44498562-109-S": {
-   "zuerst_gesehen": "2026-10-10",
-   "titel": "Legal Counsel (m/f/d) Project Logistics"
-  },
   "ba:10001-1003689867-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Manufacturing Engineer (all gender)"
   },
-  "ba:10001-1003846382-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Staffing Manager / Personaldisponent / Vertriebsinnendienst (all gender) – Inhouse"
+  "ba:13087-44498562-109-S": {
+   "zuerst_gesehen": "2026-10-10",
+   "titel": "Legal Counsel (m/f/d) Project Logistics"
   },
   "ba:10001-1003811300-S": {
    "zuerst_gesehen": "2026-10-07",
    "titel": "„Bauleiter – Verkehrssicherung (m/w/d)“ / Raum Hamburg, Stade, Kiel"
+  },
+  "ba:10001-1003846382-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Staffing Manager / Personaldisponent / Vertriebsinnendienst (all gender) – Inhouse"
   },
   "ba:15794-468617_48516-1-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2608,10 +2576,6 @@
   "ba:15794-470695_50044-1-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Senior Consultant - Tax Reporting & Processes (m/w/d)"
-  },
-  "ba:10001-1003732430-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "„Bauleiter – Verkehrssicherung (m/w/d)“ / Raum Hamburg_18.09.26"
   },
   "ba:10001-1003251723-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2648,10 +2612,6 @@
   "ba:10001-1003710701-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Human Resources Business Partner (m/w/divers)"
-  },
-  "ba:10001-1003752427-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Fachkraft für Facility Management (m/w/d)"
   },
   "ba:15639-477595461-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2717,13 +2677,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Teamlead Reliability Engineers (m/w/d)"
   },
-  "ba:10001-1003838914-S": {
-   "zuerst_gesehen": "2026-10-13",
-   "titel": "Elektroingenieur (m/w/d)"
-  },
   "ba:10000-1207174799-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": ""
+  },
+  "ba:10001-1003838914-S": {
+   "zuerst_gesehen": "2026-10-13",
+   "titel": "Elektroingenieur (m/w/d)"
   },
   "ba:13718-455436443-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2792,10 +2752,6 @@
   "ba:15112-44484838-105-S": {
    "zuerst_gesehen": "2026-10-06",
    "titel": "Human Resources Manager (m/w/d)"
-  },
-  "ba:19149-k11134.1762-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Geschäftsstellenleitung  (m/w/d)"
   },
   "ba:19149-k11134.1831-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -2925,10 +2881,6 @@
    "zuerst_gesehen": "2026-09-30",
    "titel": "Assistenz Regulatory Affairs (m/w/d) Pharma FDF"
   },
-  "ba:10001-1003370937-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Customer Acquisition Manager - B2B SaaS & E-Commerce (m/w/d), Hamburg (hybrid)"
-  },
   "ba:10001-1003840378-S": {
    "zuerst_gesehen": "2026-10-13",
    "titel": "Operations Manager, Last Mile Delivery, AMZL - Delivery Station - FIX"
@@ -2972,6 +2924,10 @@
   "ba:10001-1003696503-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Office- und Projektmanager:in (m/w/d)"
+  },
+  "ba:20441-2355623-S": {
+   "zuerst_gesehen": "2026-10-19",
+   "titel": "Werkstudent (m/w/d) Personalentwicklung"
   },
   "ba:12811-2355498-S": {
    "zuerst_gesehen": "2026-10-13",
@@ -3017,10 +2973,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Polier (m/w/d)"
   },
-  "ba:13270-2026-00008234-1-S": {
-   "zuerst_gesehen": "2026-10-08",
-   "titel": "Küchenservicekraft (m/w/d)"
-  },
   "ba:10001-1003742749-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Leitung Pädagogik und Mitbestimmung (m/w/d)"
@@ -3032,6 +2984,10 @@
   "ba:14108-0000460aeee001-S": {
    "zuerst_gesehen": "2026-10-09",
    "titel": "Stationsleitung (w|m|d) Geriatrie und Alterstraumatologie"
+  },
+  "ba:13270-2026-00008234-1-S": {
+   "zuerst_gesehen": "2026-10-08",
+   "titel": "Küchenservicekraft (m/w/d)"
   },
   "ba:10001-1001489510-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3049,6 +3005,10 @@
    "zuerst_gesehen": "2026-09-26",
    "titel": "CAMPAIGN MANAGER (M/W/D) – SOCIAL MEDIA & INFLUENCER MARKETING"
   },
+  "ba:10001-1003732877-S": {
+   "zuerst_gesehen": "2026-09-24",
+   "titel": "Leitung des Olympiastützpunktes Bayern (w/m/d)"
+  },
   "ba:10001-1003846290-S": {
    "zuerst_gesehen": "2026-10-14",
    "titel": "Stellvertretende Pflegedienstleitung PDL (m/w/d) für ambulanten Pflegedienst"
@@ -3056,10 +3016,6 @@
   "ba:14108-0000460ad2c002-S": {
    "zuerst_gesehen": "2026-10-14",
    "titel": "Referentin / Referent (w|m|d) der ärztlichen Leitungsebene"
-  },
-  "ba:10001-1003732877-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Leitung des Olympiastützpunktes Bayern (w/m/d)"
   },
   "ba:10000-1193464093-S": {
    "zuerst_gesehen": "2026-10-16",
@@ -3073,13 +3029,13 @@
    "zuerst_gesehen": "2026-10-07",
    "titel": "Meisterin / Meister (m/w/d) Technisches Gebäudemanagement"
   },
-  "ba:13270-2025-00006002-2-S": {
-   "zuerst_gesehen": "2026-10-06",
-   "titel": "Elektronikerin / Elektroniker (m/w/d) Energie- und Gebäudetechnik"
-  },
   "ba:13270-P00578518-1-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Fachapotheker/-in für Analytik und Technologie als Sanitätsoffizier/-in (m/w/d)"
+  },
+  "ba:13270-2025-00006002-2-S": {
+   "zuerst_gesehen": "2026-10-06",
+   "titel": "Elektronikerin / Elektroniker (m/w/d) Energie- und Gebäudetechnik"
   },
   "ba:10001-1003805142-S": {
    "zuerst_gesehen": "2026-10-07",
@@ -3201,10 +3157,6 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Associate, Recruiting in Munich or Dusseldorf"
   },
-  "ba:12874-1641663-2-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Senior Staff Engineer Analog Mixed Signal Design (f/m/div)"
-  },
   "ba:18892-44467522-925-S": {
    "zuerst_gesehen": "2026-09-26",
    "titel": "Credit Analyst for Financial Institutions and Non-Bank Financial Institutions (m/f/d)*"
@@ -3212,6 +3164,10 @@
   "ba:18892-44471144-928-S": {
    "zuerst_gesehen": "2026-09-29",
    "titel": "Underwriter for Nuclear Risks (m/f/d)*"
+  },
+  "ba:12874-1641663-2-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Senior Staff Engineer Analog Mixed Signal Design (f/m/div)"
   },
   "ba:10001-1003693944-S": {
    "zuerst_gesehen": "2026-10-03",
@@ -3237,13 +3193,13 @@
    "zuerst_gesehen": "2026-10-10",
    "titel": "Senior Staff Engineer Analog Verification Methodology (f/m/div)"
   },
-  "ba:12874-1641655-1-S": {
-   "zuerst_gesehen": "2026-10-10",
-   "titel": "Principal SoC Architect (f/m/div)"
-  },
   "ba:10001-1002631292-S": {
    "zuerst_gesehen": "2026-10-03",
    "titel": "Director IT Operations (w/m/d)"
+  },
+  "ba:12874-1641655-1-S": {
+   "zuerst_gesehen": "2026-10-10",
+   "titel": "Principal SoC Architect (f/m/div)"
   },
   "ba:12874-1641660-1-S": {
    "zuerst_gesehen": "2026-10-10",
@@ -3345,13 +3301,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Senior IT-Consultant Service & Sourcing Management (m/w/d)"
   },
-  "ba:16134-k57824.44287-S": {
-   "zuerst_gesehen": "2026-09-26",
-   "titel": "Projektleiter HKLS / TGA (m/w/d) – Festanstellung | Groß Raum MUC"
-  },
   "ba:15794-468422_48494-1-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "(Senior) Manager IT-Sourcing & Service Management (m/w/d)"
+  },
+  "ba:16134-k57824.44287-S": {
+   "zuerst_gesehen": "2026-09-26",
+   "titel": "Projektleiter HKLS / TGA (m/w/d) – Festanstellung | Groß Raum MUC"
   },
   "ba:10001-1000314001-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3425,13 +3381,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "Head of People & Organisation (m/w/d)"
   },
-  "ba:10001-1003851154-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Programmmanager – Halbleiter-/Chipentwicklung"
-  },
   "ba:20344-0067796357-S": {
    "zuerst_gesehen": "2026-10-02",
    "titel": "Logistikkoordinator - Internationale Versandabwicklung (m/w/d)"
+  },
+  "ba:10001-1003851154-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Programmmanager – Halbleiter-/Chipentwicklung"
   },
   "ba:18281-44439484-913-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3484,10 +3440,6 @@
   "ba:14470-44413642-91-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Business Partner (m/w/d)"
-  },
-  "ba:10001-1003730904-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Chemielaborantin / Chemielaborant / CTA / Technische Assistentin / Technischer Assistent (m/w/d)"
   },
   "ba:12633-4a3273fa_JB5223578-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3549,13 +3501,13 @@
    "zuerst_gesehen": "2026-10-08",
    "titel": "(Senior) Performance Marketing Manager SEA (m/w/d) - Remote deutschlandweit"
   },
-  "ba:10001-1003864232-S": {
-   "zuerst_gesehen": "2026-10-16",
-   "titel": "Elektroniker/Mechatroniker (m/f/d)"
-  },
   "ba:10001-1003759307-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "AI Strategic Pursuits Sales Specialist, Specialists Team Germany, Switzerland and CEE, AGS - WWSO EM"
+  },
+  "ba:10001-1003864232-S": {
+   "zuerst_gesehen": "2026-10-16",
+   "titel": "Elektroniker/Mechatroniker (m/f/d)"
   },
   "ba:10001-1002715659-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3605,13 +3557,13 @@
    "zuerst_gesehen": "2026-10-10",
    "titel": "Personalreferent*in (m/w/d)"
   },
-  "ba:10000-1203652314-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Personalreferent (m/w/d)"
-  },
   "ba:10001-1002953270-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalreferent (m/w/d)"
+  },
+  "ba:12288-4970292776-S": {
+   "zuerst_gesehen": "2026-10-19",
+   "titel": "HR Generalist / Personalreferent (m/w/d)"
   },
   "ba:10001-1003554169-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3649,13 +3601,13 @@
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Generalist (m/w/d) in Teilzeit 25-30h/W, ELEMENTS Zentrale"
   },
-  "ba:13275-VER-21450773-S": {
-   "zuerst_gesehen": "2026-10-14",
-   "titel": "Personalsachbearbeiter (m/w/d) Münchner Westen - Vermittlung"
-  },
   "ba:10001-1003568472-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "Personalsachbearbeiter - HR Allrounder (m/w/d)"
+  },
+  "ba:13275-VER-21450773-S": {
+   "zuerst_gesehen": "2026-10-14",
+   "titel": "Personalsachbearbeiter (m/w/d) Münchner Westen - Vermittlung"
   },
   "ba:14343-2332748-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3696,10 +3648,6 @@
   "ba:10001-1000848800-S": {
    "zuerst_gesehen": "2026-09-24",
    "titel": "HR Generalist (Fokus Recruiting) (m/w/d)"
-  },
-  "ba:12288-4936396862-S": {
-   "zuerst_gesehen": "2026-09-24",
-   "titel": "Senior Finance Manager (m/w/d)"
   },
   "ba:10001-1003676630-S": {
    "zuerst_gesehen": "2026-09-24",
@@ -3815,7 +3763,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.draeger.com",
    "url": "https://www.draeger.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "EDEKA Zentrale": {
    "system": "eigene Seite",
@@ -3833,7 +3781,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.fieldfisher.com",
    "url": "https://www.fieldfisher.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Fielmann": {
    "system": "eigene Seite",
@@ -3949,7 +3897,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.montblanc.com",
    "url": "https://www.montblanc.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Möhrle Happ Luther": {
    "system": "eigene Seite",
@@ -3991,7 +3939,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.remazing.com",
    "url": "https://www.remazing.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Shell Deutschland": {
    "system": "eigene Seite",
@@ -4003,7 +3951,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.signal-iduna.de/karriere",
    "url": "https://www.signal-iduna.de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "SPIEGEL-Gruppe": {
    "system": "eigene Seite",
@@ -4033,13 +3981,13 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.unilever.de",
    "url": "https://www.unilever.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "ZEIT Verlagsgruppe": {
    "system": "nicht erreichbar",
    "startseite": "https://www.zeit.de",
    "url": "https://www.zeit.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "AXA Konzern": {
    "system": "eigene Seite",
@@ -4063,7 +4011,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://karriere.bayer.de",
    "url": "https://karriere.bayer.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Carglass Deutschland": {
    "system": "workday",
@@ -4078,13 +4026,13 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.chefkoch.de",
    "url": "https://www.chefkoch.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Covestro": {
    "system": "nicht erreichbar",
    "startseite": "https://www.covestro.com/de/careers",
    "url": "https://www.covestro.com/de/careers",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Currenta": {
    "system": "eigene Seite",
@@ -4096,7 +4044,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.be-lufthansa.com",
    "url": "https://www.be-lufthansa.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Deutsche Telekom": {
    "system": "eigene Seite",
@@ -4114,7 +4062,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.devk.de/karriere",
    "url": "https://www.devk.de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "DHL Group": {
    "system": "eigene Seite",
@@ -4156,7 +4104,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.hdi.group/karriere",
    "url": "https://www.hdi.group/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "HRS Group": {
    "system": "ashby",
@@ -4205,7 +4153,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.rewe-group.com/de/karriere",
    "url": "https://www.rewe-group.com/de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "RTL Deutschland": {
    "system": "eigene Seite",
@@ -4283,7 +4231,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.bmwgroup.jobs",
    "url": "https://www.bmwgroup.jobs",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Brainlab": {
    "system": "eigene Seite",
@@ -4408,7 +4356,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://karriere.mcdonalds.de",
    "url": "https://karriere.mcdonalds.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "MediaMarktSaturn": {
    "system": "eigene Seite",
@@ -4452,7 +4400,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.personio.com",
    "url": "https://www.personio.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "ProSiebenSat.1": {
    "system": "eigene Seite",
@@ -4483,7 +4431,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.siemens.com/karriere",
    "url": "https://www.siemens.com/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Sixt SE": {
    "system": "eigene Seite",
@@ -4514,7 +4462,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.tuvsud.com",
    "url": "https://www.tuvsud.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Wacker Chemie": {
    "system": "eigene Seite",
@@ -4532,7 +4480,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.adesso.de/karriere",
    "url": "https://www.adesso.de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "AGRAVIS Raiffeisen AG": {
    "system": "eigene Seite",
@@ -4556,13 +4504,13 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.armacell.com",
    "url": "https://www.armacell.com",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Aschendorff Medien": {
    "system": "nicht erreichbar",
    "startseite": "https://www.aschendorff.de",
    "url": "https://www.aschendorff.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Atruvia AG": {
    "system": "eigene Seite",
@@ -4586,7 +4534,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.coppenrath-wiese.de/karriere",
    "url": "https://www.coppenrath-wiese.de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Coppenrath Verlag": {
    "system": "eigene Seite",
@@ -4598,7 +4546,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.d-velop.de/karriere",
    "url": "https://www.d-velop.de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "DZ HYP": {
    "system": "eigene Seite",
@@ -4652,7 +4600,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.hellmann.com/de/karriere",
    "url": "https://www.hellmann.com/de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Hengst SE": {
    "system": "eigene Seite",
@@ -4707,7 +4655,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.vb-mn.de",
    "url": "https://www.vb-mn.de",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Web Computing GmbH": {
    "system": "eigene Seite",
@@ -4719,13 +4667,13 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.westfalen.com/karriere",
    "url": "https://www.westfalen.com/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Westfleisch": {
    "system": "nicht erreichbar",
    "startseite": "https://www.westfleisch.de/karriere",
    "url": "https://www.westfleisch.de/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Windhoff": {
    "system": "eigene Seite",
@@ -4737,7 +4685,7 @@
    "system": "nicht erreichbar",
    "startseite": "https://www.wuh-group.com/karriere",
    "url": "https://www.wuh-group.com/karriere",
-   "geprueft": "2026-10-18"
+   "geprueft": "2026-10-19"
   },
   "Winkhaus": {
    "system": "eigene Seite",
